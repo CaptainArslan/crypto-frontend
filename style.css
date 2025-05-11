@@ -128,14 +128,11 @@ body {
 .section-heading {
     font-size: 2rem;
     max-width: 1200px;
-    /* font-weight: bold; */
+    text-align: center;
 }
 
 .gold-line {
-    display: block;
-    margin: 0.5rem auto 0;
     width: 30%;
-    height: auto;
 }
 
 /* Container should center content */
@@ -145,6 +142,7 @@ body {
     max-width: 1200px;
     /* Prevents stretching too wide on huge screens */
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 /* Flex align slides */
