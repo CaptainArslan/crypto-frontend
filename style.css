@@ -97,7 +97,7 @@ body {
 .video-overlay-wrapper {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
 }
 
 .video-overlay-wrapper video {
@@ -128,14 +128,15 @@ body {
 
 /* Government Section */
 .section-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2rem;
+    max-width: 1200px;
+    /* font-weight: bold; */
 }
 
 .gold-line {
     display: block;
     margin: 0.5rem auto 0;
-    width: 40%;
+    width: 30%;
     height: auto;
 }
 
@@ -150,7 +151,7 @@ body {
 
 /* Flex align slides */
 .slick-slide {
-    margin: 0 10px;
+    margin: 0 5px;
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -158,7 +159,7 @@ body {
 
 .slick-slide img {
     width: 100%;
-    max-width: 220px;
+    max-width: 240px;
     /* Adjust size as needed */
     height: auto;
     margin: auto;
