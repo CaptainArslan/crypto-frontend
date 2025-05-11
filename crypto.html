@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitcoin Landing Page</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lemon&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header id="sticky-header" class="sticky-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="Bitcoin.png" alt="Bitcoin" class="logo-default" />
+                    <img src="500000.png" alt="Scrolled" class="logo-sticky d-none" />
+                </a>
+
+                <div class="nav-icons d-flex d-lg-none">
+                    <a href="#" class="nav-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Author</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Excerpt</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Quotes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">NFT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Exclusives</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Speaking</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Merch</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-icons d-none d-lg-flex">
+                    <a href="#" class="nav-icon">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    <a href="#" class="nav-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Responsive Image Background -->
+    <section class="hero-section position-relative w-100 vh-100 overflow-hidden">
+        <picture>
+            <source media="(min-width: 768px)" srcset="banner-blockchain.gif" />
+            <img src="Mobile-blockchain.gif" alt="Bitcoin Hero Image"
+                class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-0" loading="lazy" />
+        </picture>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-7">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="video-overlay-wrapper">
+                <video autoplay muted loop playsinline>
+                    <source src="astronaut.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay-text">
+                    <h2 class="fw-bold">One Small Step for Crypto. One Giant Leap for Bitcoin. </h2>
+                    <p class="lead">To the Moon and Beyond</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Section -->
+    <section class="py-7">
+        <div class="container text-center">
+            <h1 class="section-heading mb-2">What are Governments Saying?</h1>
+            <img src="line.png" alt="line" class="gold-line" />
+        </div>
+        <!-- slider container -->
+        <div class="container regular slider">
+            <div>
+                <img src="goverments/1.png" alt="Government 1" class="img-fluid" />
+            </div>
+            <div>
+                <img src="goverments/2.png" alt="Government 2" class="img-fluid" />
+            </div>
+            <div>
+                <img src="goverments/3.png" alt="Government 3" class="img-fluid" />
+            </div>
+            <div>
+                <img src="goverments/4.png" alt="Government 4" class="img-fluid" />
+            </div>
+            <div>
+                <img src="goverments/5.png" alt="Government 5" class="img-fluid" />
+            </div>
+            <div>
+                <img src="goverments/6.png" alt="Government 6" class="img-fluid" />
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="mt-5">
+        <!-- Bottom Section: 4 Columns -->
+        <div class="bg-secondary text-light py-5">
+            <div class="container">
+                <div class="row text-center text-center row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                    <!-- Column 1 -->
+                    <div class="col">
+                        <h5 class="fw-bold">PRODUCTS</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">Pricing</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Individual</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Institutions</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Corporations</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col">
+                        <h5 class="fw-bold">LEARN MORE</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">About</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Author</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Books</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col">
+                        <h5 class="fw-bold">LINKS</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">Merch</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Pre order</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">NFT</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Social</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div class="col">
+                        <h5 class="fw-bold">INFO</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Privacy</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Terms</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Disclaimer</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="bg-dark text-light py-3 border-top border-secondary">
+            <div
+                class="container d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center gap-2">
+                <span class="small">Copyright 2025</span>
+                <span class="small">www.bitcoinat500000.com</span>
+                <span class="small">All Rights Reserved</span>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery + Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Sticky Header Script -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('sticky-header');
+            const logoDefault = document.querySelector('.logo-default');
+            const logoSticky = document.querySelector('.logo-sticky');
+
+            if (window.scrollY > 10) {
+                header.classList.add('sticky');
+                logoDefault.classList.add('d-none');
+                logoSticky.classList.remove('d-none');
+            } else {
+                header.classList.remove('sticky');
+                logoDefault.classList.remove('d-none');
+                logoSticky.classList.add('d-none');
+            }
+        });
+    </script>
+    <script>
+        $(".regular").slick({
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 3,
+            // centerMode: true,
+            centerPadding: '0px',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        centerMode: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false
+                    }
+                }
+            ]
+        });
+
+    </script>
+
+</body>
+
+</html>
