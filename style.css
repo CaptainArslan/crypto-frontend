@@ -1,8 +1,13 @@
 /* General Styles */
 html,
 body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -308,7 +313,7 @@ body {
   }
 }
 .video-section {
-  padding: 2rem 1rem; /* Top/bottom 2rem, left/right 1rem */
+  padding: 2rem 0 0 0;
   background-color: #f8f9fa; /* Optional: light background for contrast */
 }
 @media (max-width: 576px) {
@@ -335,11 +340,11 @@ body {
   object-fit: cover;
   top: 0;
   left: 0;
-  border-radius: 8px; /* Match container */
+  border-radius: 8px;
 }
 .cta-section {
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  /* background: linear-gradient(135deg, #0d0d0d, #1a1a1a); */
   color: #fff;
 }
 
@@ -548,16 +553,11 @@ body {
   height: 160px;
   border-radius: 50%;
   border: 6px solid #d4af37;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .bio-divider {
   margin-top: 1rem;
-}
-
-.bio-world-icon {
-  width: 40px;
-  height: 40px;
 }
 
 .bio-text-section {
@@ -578,3 +578,471 @@ body {
   border: none;
   margin: 1rem 0;
 }
+.bio-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.bio-modal-content {
+  background: white;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.bio-modal-body {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bio-profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #d4af37;
+  object-fit: contain;
+}
+
+.bio-world-icon {
+  width: 150px;
+  margin-top: 1rem;
+}
+
+.bio-text-section {
+  flex: 1;
+}
+
+.bio-hr {
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  border: none;
+  margin: 1rem 0;
+}
+
+.bio-description {
+  font-style: italic;
+  color: #333;
+}
+.global-shift-section {
+  background-color: #444d5a;
+  padding: 4rem 1rem;
+  color: white;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  color: #dcdcdc;
+  margin-bottom: 2rem;
+}
+
+.gold-line {
+  max-width: 300px;
+  margin: 0 auto 2.5rem;
+  display: block;
+}
+
+.people-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Center Join Button */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.join-btn {
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+  padding: 10px 24px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+  background: gold;
+  color: #000;
+}
+
+.rings-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.ring-item {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.ring-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ring-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  font-weight: 600;
+  padding: 0 10px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.ring-text span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+.business-leaders-section {
+  background: #fff;
+  color: #000;
+}
+
+.video-slide {
+  padding: 10px;
+}
+.animated-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: gold;
+  min-height: 40px;
+}
+
+#blinking-text {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.leader-video {
+  width: 100%;
+  height: 450px; /* You can adjust this to 200px, 180px, etc. */
+  object-fit: cover; /* Or use 'contain' if you want full visibility */
+  border-radius: 10px;
+}
+@media (max-width: 576px) {
+  .leader-video {
+    height: 200px;
+  }
+}
+.social-form-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2f3b4e;
+  color: white;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.social-left,
+.form-right {
+  flex: 1 1 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-left {
+  background-color: #3b465a;
+  text-align: center;
+}
+
+.form-right {
+  background-color: #1e1f23;
+}
+
+.social-left h2,
+.form-right h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Social icons in 2x2 grid */
+.social-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 40px);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons-grid a img {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
+}
+
+.social-icons-grid a img:hover {
+  transform: scale(1.1);
+}
+
+.yellow-btn {
+  background-color: #f1c40f;
+  color: black;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.yellow-btn:hover {
+  background-color: #e0b20c;
+}
+
+.custom-form {
+  width: 100%;
+  max-width: 500px;
+}
+
+.row-fields {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row-fields input {
+  flex: 1;
+}
+
+.custom-form input[type='text'],
+.custom-form input[type='email'] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.checkbox {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .social-left,
+  .form-right {
+    flex: 1 1 100%;
+    padding: 2rem;
+  }
+
+  .row-fields {
+    flex-direction: column;
+  }
+}
+.press-releases-section {
+  background-color: #0e0e0e;
+  color: white;
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.press-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #111;
+  transition: transform 0.3s ease;
+}
+
+.press-card:hover {
+  transform: translateY(-5px);
+}
+
+.press-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.press-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.press-tag {
+  display: inline-block;
+  background-color: #f1c40f;
+  color: black;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.press-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.press-text {
+  font-size: 0.95rem;
+  color: #444;
+  flex-grow: 1;
+}
+
+.press-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.press-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.more-btn {
+  background: #1f1f1f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background: #333;
+}
+.media-logos-section {
+  background-color: #f4f5f7;
+  padding: 5rem 1rem; /* more vertical spacing */
+}
+
+.media-logos-container {
+  display: flex;
+  justify-content: center;
+  gap: 8rem; /* increased gap between logos */
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.media-logo {
+  width: 180px; /* slightly larger */
+  height: 180px;
+  background: white;
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 0 0 4px #fff, 0 0 10px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.media-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.media-logo:hover {
+  transform: scale(1.08);
+}
+@media (max-width: 576px) {
+  .media-logo {
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+  }
+
+  .media-logos-container {
+    gap: 2rem;
+  }
+}
+/* first component*/

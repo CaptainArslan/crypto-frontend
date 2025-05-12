@@ -104,6 +104,7 @@
     </section>
 
 
+
     <!-- Government Section -->
     <section class="">
         <div class="container d-flex flex-column text-center justify-content-center align-items-center">
@@ -267,6 +268,47 @@
             </div>
         </div>
     </section>
+    <!-- Modal for Government Statement -->
+    <div id="govModal" class="bio-modal">
+        <div class="bio-modal-content">
+            <span class="bio-close" onclick="closeGovModal()">&times;</span>
+            <div class="bio-modal-body">
+                <div class="bio-image-section">
+                    <img id="govModalImg" src="" alt="Government Image" class="bio-profile-img" />
+                    <div class="bio-divider">
+                        <img src="goverments/World-map-image-with-gold.png" class="bio-world-icon" />
+                    </div>
+                </div>
+                <div class="bio-text-section">
+                    <h3 id="govModalTitle" class="mb-0">Government Official</h3>
+                    <hr class="bio-hr" />
+                    <p id="govModalQuote" class="bio-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Government Quotes -->
+    <div id="govModal" class="bio-modal">
+        <div class="bio-modal-content">
+            <span class="bio-close" onclick="closeGovModal()">&times;</span>
+            <div class="bio-modal-body">
+                <div class="bio-image-section">
+                    <img id="govImage" src="" alt="Government Image" class="bio-profile-img" />
+                    <div class="bio-divider">
+                        <img src="goverments/World-map-image-with-gold.png" class="bio-world-icon" />
+                    </div>
+                </div>
+                <div class="bio-text-section">
+                    <h3 id="govName" class="mb-0"></h3>
+                    <p id="govSubtitle" class="text-muted mb-2"></p>
+                    <hr class="bio-hr" />
+                    <p id="govQuote" class="bio-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="video-section">
         <div class="video-container">
             <video muted loop playsinline controls>
@@ -285,19 +327,7 @@
             </div>
         </div>
     </section>
-    <div
-        style="height:560px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;">
-        <div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe
-                src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%"
-                height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0"
-                style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div>
-        <div
-            style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;">
-            <a href="https://coinlib.io" target="_blank"
-                style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency
-                Prices</a>&nbsp;by Coinlib
-        </div>
-    </div>
+
     <section class="influencers-section">
         <div class="container">
             <h2 class="section-title">Here are Some of The Most Influential People Who Played</h2>
@@ -454,7 +484,7 @@
     </div>
 
 
-    <section class="image-slider-section py-5 bg-dark text-center text-light">
+    <section class="image-slider-section py-5 bg-light text-center text-dark">
         <div class="container">
             <!-- Heading Text -->
             <h2 class="fw-bold mb-2">A LITERARY WORK OF ART</h2>
@@ -486,6 +516,19 @@
             </div>
         </div>
     </section>
+    <div
+        style="height:560px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;">
+        <div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe
+                src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%"
+                height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0"
+                style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div>
+        <div
+            style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;">
+            <a href="https://coinlib.io" target="_blank"
+                style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency
+                Prices</a>&nbsp;by Coinlib
+        </div>
+    </div>
     <section class="referral-section py-5 bg-light text-center">
         <div class="container">
             <!-- Heading -->
@@ -586,19 +629,254 @@
             </div>
         </div>
     </section>
+    <section class="global-shift-section">
+        <div class="container text-center">
+
+            <!-- Headings -->
+            <h1 class="main-heading">Prepare for The Global Shift</h1>
+            <p class="sub-heading animated-text">
+                <span id="blinking-text">Crypto for The People By The People</span>
+            </p>
+
+            <!-- Gold Line -->
+            <img src="https://bitcoinat500000.com/img/Line-768x62.png" alt="Gold Line" class="gold-line" />
+
+            <!-- People Image -->
+            <img src="https://bitcoinat500000.com/img/people/People_As_used_on_site_Sent-removebg-preview.png"
+                alt="People" class="people-img" />
+
+            <!-- Join Us Button -->
+            <div class="btn-wrapper">
+                <a href="#" class="join-btn">Join Us</a>
+            </div>
+
+            <!-- Gold Ring Stats -->
+            <div class="rings-grid mt-5">
+                <div class="ring-item">
+                    <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
+                    <div class="ring-text">$1,000 Billion<br><span>Crypto Market Cap</span></div>
+                </div>
+                <div class="ring-item">
+                    <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
+                    <div class="ring-text">300 Million<br><span>Plus Crypto Users</span></div>
+                </div>
+                <div class="ring-item">
+                    <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
+                    <div class="ring-text">100,000<br><span>New Millionaires</span></div>
+                </div>
+                <div class="ring-item">
+                    <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
+                    <div class="ring-text">$112 Billion<br><span>Daily Crypto Trade</span></div>
+                </div>
+                <div class="ring-item">
+                    <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
+                    <div class="ring-text">9 Million%<br><span>Bitcoin’s Growth</span></div>
+                </div>
+                <div class="ring-item">
+                    <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
+                    <div class="ring-text">$2 Trillion<br><span>Crypto Market Cap</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="business-leaders-section py-5">
+        <div class="full-width-container">
+
+            <h2 class="text-center mb-4">WHAT ARE BUSINESS LEADERS SAYING?</h2>
+
+            <div class="business-video-slider">
+                <!-- Slide 1 -->
+                <div class="video-slide">
+                    <video controls muted playsinline class="leader-video">
+                        <source
+                            src="https://bitcoinat500000.com/storage/business_leaders/videos/01JPJPNZ608EH6FBFB1CQ4AGB3.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Repeat as needed -->
+                <div class="video-slide">
+                    <video controls muted playsinline class="leader-video">
+                        <source
+                            src="https://bitcoinat500000.com/storage/business_leaders/videos/01JPJPNZ608EH6FBFB1CQ4AGB3.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="video-slide">
+                    <video controls muted playsinline class="leader-video">
+                        <source
+                            src="https://bitcoinat500000.com/storage/business_leaders/videos/01JPJPNZ608EH6FBFB1CQ4AGB3.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="video-slide">
+                    <video controls muted playsinline class="leader-video">
+                        <source
+                            src="https://bitcoinat500000.com/storage/business_leaders/videos/01JPJPNZ608EH6FBFB1CQ4AGB3.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="social-form-section ">
+        <div class="container-flex">
+            <!-- Left Side -->
+            <div class="social-left">
+                <h2>Social Media<br>Follow and Share</h2>
+
+                <div class="social-icons-grid">
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+                            alt="LinkedIn" /></a>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+                            alt="Instagram" /></a>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
+                            alt="Twitter" /></a>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg"
+                            alt="YouTube" /></a>
+                </div>
+
+                <button class="yellow-btn">Share your content</button>
+            </div>
+
+            <!-- Right Side -->
+            <div class="form-right">
+                <h2>Mind Blowing Content<br>Eye-Opening Analysis</h2>
+
+                <form class="custom-form">
+                    <div class="row-fields">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Title">
+
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        I agree to the User Agreement, Privacy Policy, Cookie Policy, and E-Sign Consent.
+                    </label>
+
+                    <button type="submit" class="yellow-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="press-releases-section py-5 mt-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Press Releases</h2>
+
+            <div class="press-grid">
+                <!-- Press Card -->
+                <div class="press-card">
+                    <img src="https://bitcoinat500000.com/img/slideshow/pexels-sanaan-3075993%20(1).jpg"
+                        alt="Press Image" class="press-img" />
+                    <div class="press-body">
+                        <span class="press-tag">Blockchain</span>
+                        <h4 class="press-title">Web 3.0 is The Internet's Next Evolution</h4>
+                        <p class="press-text">
+                            Web 3.0 introduces a paradigm shift, bringing decentralization to the internet. Discover how
+                            blockchain
+                            technology is reshaping the digital landscape...
+                        </p>
+                        <div class="press-footer">
+                            <div class="author">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Author" />
+                                <span>John Doe</span>
+                            </div>
+                            <span class="press-date">March 14, 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat card 2 & 3 -->
+                <div class="press-card">
+                    <img src="https://bitcoinat500000.com/img/slideshow/pexels-sanaan-3075993%20(1).jpg"
+                        alt="Press Image" class="press-img" />
+                    <div class="press-body">
+                        <span class="press-tag">Blockchain</span>
+                        <h4 class="press-title">Web 3.0 is The Internet's Next Evolution</h4>
+                        <p class="press-text">
+                            Web 3.0 introduces a paradigm shift, bringing decentralization to the internet. Discover how
+                            blockchain
+                            technology is reshaping the digital landscape...
+                        </p>
+                        <div class="press-footer">
+                            <div class="author">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Author" />
+                                <span>John Doe</span>
+                            </div>
+                            <span class="press-date">March 14, 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <img src="https://bitcoinat500000.com/img/slideshow/pexels-sanaan-3075993%20(1).jpg"
+                        alt="Press Image" class="press-img" />
+                    <div class="press-body">
+                        <span class="press-tag">Blockchain</span>
+                        <h4 class="press-title">Web 3.0 is The Internet's Next Evolution</h4>
+                        <p class="press-text">
+                            Web 3.0 introduces a paradigm shift, bringing decentralization to the internet. Discover how
+                            blockchain
+                            technology is reshaping the digital landscape...
+                        </p>
+                        <div class="press-footer">
+                            <div class="author">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Author" />
+                                <span>John Doe</span>
+                            </div>
+                            <span class="press-date">March 14, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="more-btn">More</button>
+            </div>
+        </div>
+    </section>
+    <section class="media-logos-section ">
+        <div class="media-logos-container">
+            <div class="media-logo">
+                <img src="https://bitcoinat500000.com/img/news%20logo/CBS-logo.png" alt="CBS" />
+            </div>
+            <div class="media-logo">
+                <img src="https://bitcoinat500000.com/img/news%20logo/Usa-today-logo.png" alt="USA Today" />
+            </div>
+            <div class="media-logo">
+                <img src="https://bitcoinat500000.com/img/news%20logo/NBC_logo.png" alt="NBC" />
+            </div>
+            <div class="media-logo">
+                <img src="https://bitcoinat500000.com/img/news%20logo/Fox-news-logo.png" alt="Fox News" />
+            </div>
+        </div>
+    </section>
+
 
     <section>
-        <div class="bg-black text-light d-flex align-items-center justify-content-center" style="height: 500px;">
+        <div class="bg-black text-light d-flex align-items-center justify-content-center" style="height: 200px;">
             <div class="container-fluid p-5 h-100">
                 <div class="row h-100 align-items-center justify-content-center">
                     <!-- Image 1 -->
                     <div class="col-6 d-flex align-items-center justify-content-center h-100">
-                        <img src="./Bitcoin.png" alt="Logo" style="width: 100%; object-fit: cover;">
+                        <img src="https://bitcoinat500000.com/img/Bitcoin-Skin.png" alt="Logo"
+                            style="width: 80%; object-fit: cover;">
                     </div>
 
                     <!-- Image 2 -->
                     <div class="col-6 d-flex align-items-center justify-content-center h-100">
-                        <img src="./500000.png" alt="Logo" style="width: 100%; object-fit: cover;">
+                        <img src="https://bitcoinat500000.com/img/_500000-Bitcoin-skin.png" alt="Logo"
+                            style="width: 80%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -677,6 +955,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
+        // Scroll header
         window.addEventListener('scroll', function () {
             const header = document.getElementById('sticky-header');
             const logoDefault = document.querySelector('.logo-default');
@@ -693,13 +972,37 @@
             }
         });
 
+        // Modal behavior for government quotes
         $(document).ready(function () {
-            $('.goverment-modal').click(function (e) {
-                e.preventDefault();
-                alert('Button clicked!');
+            $('.goverment-modal').each(function (index) {
+                $(this).on('click', function () {
+                    const card = $(this).closest('.position-relative');
+                    const imgSrc = card.find('img').first().attr('src');
+                    const quote = card.find('.quotes').text().trim();
+                    const title = card.find('h6').text().trim();
+
+                    $('#govModalImg').attr('src', imgSrc);
+                    $('#govModalTitle').text(title);
+                    $('#govModalQuote').text(quote);
+
+                    $('#govModal').fadeIn();
+                });
             });
+
+            // Close modal if clicked outside content
+            window.onclick = function (event) {
+                const modal = document.getElementById("govModal");
+                if (event.target === modal) {
+                    closeGovModal();
+                }
+            }
         });
 
+        function closeGovModal() {
+            $('#govModal').fadeOut();
+        }
+
+        // Slick slider
         $(".regular").slick({
             infinite: true,
             slidesToShow: 5,
@@ -725,12 +1028,12 @@
                 }
             ]
         });
-
     </script>
+
     <script>
         $(document).ready(function () {
             $('.image-slider').slick({
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
@@ -775,6 +1078,20 @@
             });
         }
     </script>
+    <script>
+        const phrases = [
+            "Don’t Get Left Behind in a Changing World",
+            "Crypto for The People By The People",
+            "Join the Future of Finance",
+
+        ];
+
+        let i = 0;
+        setInterval(() => {
+            document.getElementById("blinking-text").textContent = phrases[i];
+            i = (i + 1) % phrases.length;
+        }, 2000); // every 3 seconds
+    </script>
 
     <script>
         function openBioModal(name, title, description, imgSrc) {
@@ -796,6 +1113,30 @@
                 modal.style.display = "none";
             }
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.business-video-slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
     </script>
 
 </body>
