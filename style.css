@@ -11,8 +11,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
+  /* font-family: "Roboto", Sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -67,7 +69,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 24px;
   color: #f0b90b !important;
   z-index: 1030;
@@ -159,14 +161,17 @@ body {
 
 /* Government Section */
 .section-heading {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   max-width: 1200px;
   text-align: center;
+  color: #bfbcbc;
+  font-size: 40px;
 }
-
+/* 
 .gold-line {
-  width: 30%;
-}
+  width: 40%;
+  margin-top: -15px;
+} */
 
 /* Container should center content */
 .slider {
@@ -222,7 +227,7 @@ body {
     z-index: 1010;
   }
 
-  .navbar > .container {
+  .navbar>.container {
     justify-content: space-between;
   }
 
@@ -256,6 +261,7 @@ body {
     font-size: 20px;
   }
 }
+
 .video-overlay-wrapper {
   position: relative;
   width: 100%;
@@ -305,12 +311,14 @@ body {
     font-size: 1rem;
   }
 }
+
 .video-section {
   padding: 2rem 0 0 0;
-  background-color: #f8f9fa; /* Optional: light background for contrast */
+  /* background-color: #f8f9fa; */
 }
+
 @media (max-width: 576px) {
-  .row > div img {
+  .row>div img {
     object-fit: contain !important;
     padding: 0 5px;
   }
@@ -319,11 +327,14 @@ body {
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  border-radius: 8px;
+  /* Optional: rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Optional: subtle shadow */
 }
 
 .video-container video {
@@ -335,6 +346,7 @@ body {
   left: 0;
   border-radius: 8px;
 }
+
 .cta-section {
   padding: 3rem 1rem;
   /* background: linear-gradient(135deg, #0d0d0d, #1a1a1a); */
@@ -343,7 +355,7 @@ body {
 
 .cta-section h2 {
   font-size: 2rem;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .btn-group-custom {
@@ -357,7 +369,7 @@ body {
   background: linear-gradient(to bottom, #ffd700, #d4af37);
   border: 2px solid #aa8833;
   color: #333;
-
+  margin-top: 12px;
   padding: 8px 20px;
   border-radius: 6px;
   font-size: 0.7rem;
@@ -386,9 +398,10 @@ body {
 
 .referral-logo {
   font-size: 1.1rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   border-radius: 4px;
 }
+
 .influencers-section {
   padding: 4rem 1rem;
   background: #fff;
@@ -397,7 +410,7 @@ body {
 
 .section-title {
   font-size: 1.75rem;
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-bottom: 0.5rem;
 }
 
@@ -427,11 +440,11 @@ body {
 
 /* Profile Image */
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #d4af37;
+  /* border: 6px solid #d4af37; */
   margin-bottom: 1rem;
 }
 
@@ -440,17 +453,20 @@ body {
   width: 200px;
   height: 50px;
   margin-bottom: 1rem;
+  margin-top: -10px;
 }
 
 /* Name */
 .name {
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-bottom: 0.5rem;
+  margin-top: -5px;
 }
 
 .influencer-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 cards per row */
   gap: 2rem;
   justify-items: center;
 }
@@ -479,6 +495,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 .bio-modal {
   display: none;
   position: fixed;
@@ -508,7 +525,7 @@ body {
   top: 10px;
   right: 20px;
   font-size: 28px;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 
@@ -554,6 +571,7 @@ body {
   border: none;
   margin: 1rem 0;
 }
+
 .bio-modal {
   display: none;
   position: fixed;
@@ -621,6 +639,7 @@ body {
   font-style: italic;
   color: #333;
 }
+
 .global-shift-section {
   background-color: #444d5a;
   padding: 4rem 1rem;
@@ -630,7 +649,7 @@ body {
 
 .main-heading {
   font-size: 3rem;
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-bottom: 0.5rem;
 }
 
@@ -641,8 +660,9 @@ body {
 }
 
 .gold-line {
-  max-width: 300px;
-  margin: 0 auto 2.5rem;
+  max-width: 400px;
+  /* margin: 0 auto 2.5rem; */
+  margin-top: -5px;
   display: block;
 }
 
@@ -664,7 +684,7 @@ body {
   border: 1px solid gold;
   color: gold;
   padding: 10px 24px;
-  font-weight: 600;
+  /* font-weight: 600; */
   border-radius: 4px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -702,7 +722,7 @@ body {
   color: white;
   font-size: 0.95rem;
   line-height: 1.3;
-  font-weight: 600;
+  /* font-weight: 600; */
   padding: 0 10px;
   text-align: center;
   pointer-events: none;
@@ -710,10 +730,11 @@ body {
 
 .ring-text span {
   display: block;
-  font-weight: 400;
+  /* font-weight: 400; */
   font-size: 0.85rem;
   margin-top: 5px;
 }
+
 .business-leaders-section {
   background: #fff;
   color: #000;
@@ -722,9 +743,10 @@ body {
 .video-slide {
   padding: 10px;
 }
+
 .animated-text {
   font-size: 1.5rem;
-  font-weight: 500;
+  /* font-weight: 500; */
   color: gold;
   min-height: 40px;
 }
@@ -734,10 +756,12 @@ body {
 }
 
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -745,15 +769,19 @@ body {
 
 .leader-video {
   width: 100%;
-  height: 450px; /* You can adjust this to 200px, 180px, etc. */
-  object-fit: cover; /* Or use 'contain' if you want full visibility */
+  height: 450px;
+  /* You can adjust this to 200px, 180px, etc. */
+  object-fit: cover;
+  /* Or use 'contain' if you want full visibility */
   border-radius: 10px;
 }
+
 @media (max-width: 576px) {
   .leader-video {
     height: 200px;
   }
 }
+
 .social-form-section {
   display: flex;
   flex-wrap: wrap;
@@ -788,7 +816,7 @@ body {
 .social-left h2,
 .form-right h2 {
   font-size: 1.8rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -863,6 +891,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .social-left,
   .form-right {
     flex: 1 1 100%;
@@ -873,6 +902,7 @@ body {
     flex-direction: column;
   }
 }
+
 .press-releases-section {
   background-color: #0e0e0e;
   color: white;
@@ -917,7 +947,7 @@ body {
   background-color: #f1c40f;
   color: black;
   font-size: 0.75rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   padding: 2px 6px;
   border-radius: 12px;
   margin-bottom: 1rem;
@@ -929,7 +959,7 @@ body {
 
 .press-title {
   font-size: 1.2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 0.8rem;
 }
 
@@ -968,7 +998,7 @@ body {
   color: white;
   padding: 10px 20px;
   border: none;
-  font-weight: 500;
+  /* font-weight: 500; */
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -977,6 +1007,7 @@ body {
 .more-btn:hover {
   background: #333;
 }
+
 .media-logos-section {
   background-color: #f4f5f7;
   padding: 5rem 1rem;
@@ -1014,6 +1045,7 @@ body {
 .media-logo:hover {
   transform: scale(1.08);
 }
+
 @media (max-width: 576px) {
   .media-logo {
     width: 140px;
@@ -1025,6 +1057,7 @@ body {
     gap: 2rem;
   }
 }
+
 .slick-prev-custom,
 .slick-next-custom {
   background-size: contain;
@@ -1051,6 +1084,7 @@ body {
   right: -70px;
   background-image: url('https://crypto-test.codecyon.com/wp-content/uploads/2023/03/next.png');
 }
+
 .govt-desc {
   top: 30%;
 }
@@ -1060,6 +1094,7 @@ body {
     top: 23%;
   }
 }
+
 .influencer-card {
   transition: all 0.5s ease-in-out;
 }
