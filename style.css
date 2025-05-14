@@ -377,6 +377,12 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 }
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Adjust spacing as needed */
+}
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
 
 .gold-button:hover {
   background: linear-gradient(to bottom, #444, #111);
@@ -1204,6 +1210,23 @@ body {
 .slick-next-custom {
   right: -70px;
   background-image: url('https://crypto-test.codecyon.com/wp-content/uploads/2023/03/next.png');
+}
+@media (max-width: 768px) {
+  .slick-prev-custom {
+    left: 10px; /* pull it inside the screen */
+  }
+
+  .slick-next-custom {
+    right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slick-prev-custom,
+  .slick-next-custom {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .govt-desc {
