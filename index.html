@@ -61,7 +61,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Merch</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
                     </ul>
                 </div>
 
@@ -103,7 +103,7 @@
     </section>
 
     <!-- Government Section -->
-    <section class="bg-dark py-5">
+    <section class="govt-section py-5">
         <div class="container d-flex flex-column text-center justify-content-center align-items-center">
             <h1 class="section-heading">WHAT ARE GOVERNMENTS SAYING?</h1>
             <img src="line.png" alt="line" class="gold-line" />
@@ -324,28 +324,30 @@
             </div>
         </div>
     </div>
-
-    <section class="video-section">
-        <div class="video-container">
-            <video muted loop playsinline controls>
-                <source
-                    src="https://crypto-test.codecyon.com/wp-content/uploads/2023/03/Crypto-World-Loud-Compressed.m4v"
-                    type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <section class="cta-section text-center">
-        <div class="container">
-            <div class="btn-group-custom">
-                <a href="#" class="btn gold-button">Personal Website</a>
-                <a href="#" class="btn gold-button">Download Keynote</a>
+    <div class="container-fluid mt-1 video-crypto">
+        <section class="video-section">
+            <div class="video-container">
+                <video muted loop playsinline controls>
+                    <source
+                        src="https://crypto-test.codecyon.com/wp-content/uploads/2023/03/Crypto-World-Loud-Compressed.m4v"
+                        type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-        </div>
-    </section>
+            <section class="cta-section text-center">
+                <div class="container">
+                    <div class="btn-group-custom">
+                        <a href="#" class="btn bio-button">Personal Website</a>
+                        <a href="#" class="btn bio-button">Download Keynote</a>
+                    </div>
+                </div>
+            </section>
+        </section>
 
-    <section class="influencers-section">
+    </div>
+
+
+    <section class="influencers-section mt-2">
         <div class="">
             <div class="text d-flex justify-content-center align-items-center flex-column">
                 <h2 class="section-title">Here are Some of The Most Influential People Who Played</h2>
@@ -359,7 +361,7 @@
                         alt="Nayib Bukele" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Nayib Bukele</h6>
-                    <button class="gold-button" onclick="openBioModal(
+                    <button class="bio-button" onclick="openBioModal(
                                           'Nayib Bukele',
                                           'President of El Savador',
                                           'On the 7th of September 2021, El Salvador was the first country in the world to adopt Bitcoin as legal tender. Its promulgation into law was championed by President Nayib Bukele. The decision thrust El Salvador and President Bukele into the global conversation overnight. El Salvador upped the ante by announcing the issuance of the world’s first Bitcoin-backed bond. These bonds started as a sovereign bond. President Bukele is a pioneer in transforming his country with nascent technology and reducing dependence on IMF loans. He announced the confluence of 32 central banks and 12 financial authorities in El Salvador to discuss Bitcoin on May 16, 2022. As of May 2022, El Salvador had amassed a total of 2,301 Bitcoin. He really gets Bitcoin — listen to his What Bitcoin Did interview.',
@@ -376,7 +378,7 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Charlie Lee</h6>
-                    <button class="gold-button" onclick="openBioModal(
+                    <button class="bio-button" onclick="openBioModal(
                                           'Charlie Lee',
                                           'Litecoin Creator Entrepreneur Computer Programmer',
                                           'Charlie Lee, the creator of Litecoin, one of the earliest Bitcoin derivatives, is best known as a highly successful entrepreneur in the emerging cryptocurrency industry. Under his leadership, Litecoin has remained one of the top cryptocurrencies in an exceptionally volatile market — unlike many other altcoins that launched in the early 2010s and disappeared. Lee developed and launched Litecoin (LTC) in 2011 while he was still a software engineer at Google. In 2013, he left Google to serve as engineering manager and director of engineering at Coinbase, a digital currency exchange start-up. In 2017, he left Coinbase to focus full-time on the Litecoin Foundation, a non-profit he founded in 2016. As of March 2022, he continues to serve as Managing Director at the Litecoin Foundation, focusing on awareness and adoption of Litecoin.',
@@ -393,7 +395,7 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Charlie Cox</h6>
-                    <button class="gold-button"
+                    <button class="bio-button"
                         onclick="openBioModal('Vultic', 'Owner of SpaceX', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...', 'https://crypto-test.codecyon.com/frontend/images/influentials/169332174535.png')">
                         View Bio
                     </button>
@@ -404,7 +406,7 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Paige Karen</h6>
-                    <button class="gold-button"
+                    <button class="bio-button"
                         onclick="openBioModal('Vultic', 'Owner of SpaceX', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...', 'https://bitcoinat500000.com/storage/influential_people/images/01JPK6V0TN4YNJFH0QAAXTFHT1.png')">
                         View Bio
                     </button>
@@ -415,7 +417,7 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Kevin Feige</h6>
-                    <button class="gold-button"
+                    <button class="bio-button"
                         onclick="openBioModal('Vultic', 'Owner of SpaceX', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...', 'https://bitcoinat500000.com/storage/influential_people/images/01JPK6V0TN4YNJFH0QAAXTFHT1.png')">
                         View Bio
                     </button>
@@ -426,7 +428,7 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Bruce Banner</h6>
-                    <button class="gold-button"
+                    <button class="bio-button"
                         onclick="openBioModal('Vultic', 'Owner of SpaceX', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...', 'https://bitcoinat500000.com/storage/influential_people/images/01JPK6V0TN4YNJFH0QAAXTFHT1.png')">
                         View Bio
                     </button>
@@ -437,7 +439,7 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Tony Stark</h6>
-                    <button class="gold-button"
+                    <button class="bio-button"
                         onclick="openBioModal('Vultic', 'Owner of SpaceX', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...', 'https://bitcoinat500000.com/storage/influential_people/images/01JPK6V0TN4YNJFH0QAAXTFHT1.png')">
                         View Bio
                     </button>
@@ -448,7 +450,7 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Wanda Maximoff</h6>
-                    <button class="gold-button"
+                    <button class="bio-button"
                         onclick="openBioModal('Vultic', 'Owner of SpaceX', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...', 'https://bitcoinat500000.com/storage/influential_people/images/01JPK6V0TN4YNJFH0QAAXTFHT1.png')">
                         View Bio
                     </button>
@@ -459,7 +461,7 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Starlet paige</h6>
-                    <button class="gold-button"
+                    <button class="bio-button"
                         onclick="openBioModal('Vultic', 'Owner of SpaceX', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...', 'https://bitcoinat500000.com/storage/influential_people/images/01JPK6V0TN4YNJFH0QAAXTFHT1.png')">
                         View Bio
                     </button>
@@ -470,14 +472,13 @@
                         alt="Vutanic" class="profile-img" />
                     <img src="https://bitcoinat500000.com/img/WORLDM_1.png" alt="World Icon" class="world-icon" />
                     <h6 class="name">Elliot</h6>
-                    <button class="gold-button"
+                    <button class="bio-button"
                         onclick="openBioModal('Vultic', 'Owner of SpaceX', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...', 'https://bitcoinat500000.com/storage/influential_people/images/01JPK6V0TN4YNJFH0QAAXTFHT1.png')">
                         View Bio
                     </button>
 
                 </div>
 
-                <!-- Add more cards as needed -->
             </div>
         </div>
     </section>
@@ -506,7 +507,7 @@
     <section class="image-slider-section py-5 bg-light text-center text-dark">
         <div class="container">
             <!-- Heading Text -->
-            <h2 class=" mb-2">A LITERARY WORK OF ART</h2>
+            <h1 class=" mb-2">A LITERARY WORK OF ART</h1>
             <p class="lead mb-1">Acquire Appreciating Assets While Available</p>
             <p class="mb-4">12 Distinct Colors for 12 Unique Individuals</p>
 
@@ -527,8 +528,8 @@
 
             <!-- Buttons -->
             <div class="btn-group-custom">
-                <a href="#" class="btn gold-button">Learn More</a>
-                <a href="#" class="btn gold-button">NFT Book</a>
+                <a href="#" class="btn bio-button">Learn More</a>
+                <a href="#" class="btn bio-button">NFT Book</a>
             </div>
         </div>
     </section>
@@ -795,12 +796,11 @@
         </div>
     </section>
 
-    <section class="social-form-section ">
+    <section class="social-form-section">
         <div class="container-flex">
-            <!-- Left Side -->
+            <!-- Left: Social Media -->
             <div class="social-left">
                 <h2>Social Media<br>Follow and Share</h2>
-
                 <div class="social-icons-grid">
                     <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
                             alt="LinkedIn" /></a>
@@ -810,15 +810,19 @@
                             alt="Twitter" /></a>
                     <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg"
                             alt="YouTube" /></a>
-                </div>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg"
+                            alt="TikTok" /></a>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+                            alt="Facebook" /></a>
 
-                <button class="yellow-btn">Share your content</button>
+                </div>
+                <button class="yellow-btn">Share the Content</button>
             </div>
 
-            <!-- Right Side -->
+
+            <!-- Right: Form -->
             <div class="form-right">
                 <h2>Mind Blowing Content<br>Eye-Opening Analysis</h2>
-
                 <form class="custom-form">
                     <div class="row-fields">
                         <input type="text" placeholder="First Name" required>
@@ -826,88 +830,89 @@
                     </div>
                     <input type="email" placeholder="Email" required>
                     <input type="text" placeholder="Title">
-
                     <label class="checkbox">
                         <input type="checkbox" required>
-                        I agree to the User Agreement, Privacy Policy, Cookie Policy, and E-Sign Consent.
+                        <span>I agree to the User Agreement, Privacy Policy, Cookie Policy, and E-Sign Consent.</span>
                     </label>
-
-                    <button type="submit" class="yellow-btn">Submit</button>
+                    <button type="submit" class="yellow-btn2">Submit</button>
                 </form>
             </div>
         </div>
     </section>
+
 
     <section class="press-releases-section py-5 mt-5">
         <div class="container">
             <h2 class="text-center mb-5">Press Releases</h2>
 
             <div class="press-grid">
-                <!-- Press Card -->
+                <!-- Press Card 1 -->
                 <div class="press-card">
                     <img src="https://bitcoinat500000.com/img/slideshow/pexels-sanaan-3075993%20(1).jpg"
                         alt="Press Image" class="press-img" />
                     <div class="press-body">
                         <span class="press-tag">Blockchain</span>
-                        <h4 class="press-title">Web 3.0 is The Internet's Next Evolution</h4>
+                        <h4 class="press-title">How Smart Contracts Are Changing Finance Forever</h4>
                         <p class="press-text">
-                            Web 3.0 introduces a paradigm shift, bringing decentralization to the internet. Discover how
-                            blockchain
-                            technology is reshaping the digital landscape...
+                            From decentralized lending to secure digital agreements, smart contracts are making
+                            intermediaries
+                            obsolete. Here's why it matters...
                         </p>
                         <div class="press-footer">
                             <div class="author">
-                                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Author" />
-                                <span>John Doe</span>
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Author" />
+                                <span>Linda Carter</span>
                             </div>
-                            <span class="press-date">March 14, 2025</span>
+                            <span class="press-date">April 2, 2025</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Repeat card 2 & 3 -->
+                <!-- Press Card 2 -->
                 <div class="press-card">
                     <img src="https://bitcoinat500000.com/img/slideshow/pexels-sanaan-3075993%20(1).jpg"
                         alt="Press Image" class="press-img" />
                     <div class="press-body">
-                        <span class="press-tag">Blockchain</span>
-                        <h4 class="press-title">Web 3.0 is The Internet's Next Evolution</h4>
+                        <span class="press-tag">Artificial Intelligence</span>
+                        <h4 class="press-title">AI's Role in Predictive Analytics for Web 3.0</h4>
                         <p class="press-text">
-                            Web 3.0 introduces a paradigm shift, bringing decentralization to the internet. Discover how
-                            blockchain
-                            technology is reshaping the digital landscape...
+                            As Web 3.0 gains traction, AI is proving to be an indispensable tool for predicting trends
+                            and
+                            automating complex decisions...
                         </p>
                         <div class="press-footer">
                             <div class="author">
-                                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Author" />
-                                <span>John Doe</span>
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author" />
+                                <span>Marcus Lin</span>
                             </div>
-                            <span class="press-date">March 14, 2025</span>
+                            <span class="press-date">May 9, 2025</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Press Card 3 -->
                 <div class="press-card">
                     <img src="https://bitcoinat500000.com/img/slideshow/pexels-sanaan-3075993%20(1).jpg"
                         alt="Press Image" class="press-img" />
                     <div class="press-body">
-                        <span class="press-tag">Blockchain</span>
-                        <h4 class="press-title">Web 3.0 is The Internet's Next Evolution</h4>
+                        <span class="press-tag">Metaverse</span>
+                        <h4 class="press-title">Building Identity in the Metaverse: What’s Next?</h4>
                         <p class="press-text">
-                            Web 3.0 introduces a paradigm shift, bringing decentralization to the internet. Discover how
-                            blockchain
-                            technology is reshaping the digital landscape...
+                            As virtual worlds become mainstream, questions about identity, ownership, and privacy are
+                            taking center
+                            stage. Explore the future...
                         </p>
                         <div class="press-footer">
                             <div class="author">
-                                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Author" />
-                                <span>John Doe</span>
+                                <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="Author" />
+                                <span>Alicia Gomez</span>
                             </div>
-                            <span class="press-date">March 14, 2025</span>
+                            <span class="press-date">February 21, 2025</span>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <div class="text-center mt-4">
                 <button class="more-btn">More</button>
