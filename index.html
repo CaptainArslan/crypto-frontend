@@ -78,14 +78,39 @@
     </header>
 
     <!-- Hero Section with Responsive Image Background -->
-    <section class="hero-section position-relative w-100 vh-100 overflow-hidden">
+    <!-- <section class="hero-section position-relative w-100 vh-100 overflow-hidden">
         <picture>
             <source media="(min-width: 768px)" srcset="banner-blockchain.gif" />
             <img src="Mobile-blockchain.gif" alt="Bitcoin Hero Image"
                 class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-0" loading="lazy" />
         </picture>
-    </section>
+    </section> -->
 
+    <!-- Hero Slider Section -->
+    <section class="hero-section hero-fullscreen hero-overflow">
+        <div class="hero-slider">
+            <!-- Slide 1: Mobile Blockchain GIF -->
+            <div class="hero-slide hero-slide--active">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="banner-blockchain.gif" />
+                    <img src="Mobile-blockchain.gif" alt="Responsive Hero" class="hero-img" loading="lazy" />
+                </picture>
+            </div>
+
+            <!-- Slide 2: Video -->
+            <div class="hero-slide">
+                <video class="hero-video hero-img" autoplay muted loop playsinline>
+                    <source src="./bgVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Slide 3: External Bitcoin Image -->
+            <div class="hero-slide">
+                <img src="./bgimage.png" alt="Bitcoin Slide" class="hero-img" loading="lazy" />
+            </div>
+        </div>
+    </section>
     <!-- Video Section -->
     <section class="py-7">
         <div class="container">
@@ -1261,7 +1286,18 @@
 
         setInterval(shuffleCards, 3000);
     </script>
+    <script>
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        let heroIndex = 0;
 
+        function nextHeroSlide() {
+            heroSlides[heroIndex].classList.remove('hero-slide--active');
+            heroIndex = (heroIndex + 1) % heroSlides.length;
+            heroSlides[heroIndex].classList.add('hero-slide--active');
+        }
+
+        setInterval(nextHeroSlide, 5000); // Slide every 5 seconds
+    </script>
     <script>
         function openBioModal(name, title, description, imgSrc) {
             document.getElementById("bioName").innerText = name;
