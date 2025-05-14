@@ -30,8 +30,8 @@
 
     <!-- Navbar -->
     <header id="sticky-header" class="sticky-header">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
+        <nav class="navbar navbar-expand-xl navbar-dark">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -118,8 +118,8 @@
                     <div class="p-2 text-light">
                         <h6 class="lead ">Joe Biden
                         </h6>
-                        <p class="text p-2">U.S. President</p>
-                        <p class="text font-italic quotes" style="font-size: 14px;">
+                        <p class="text ">U.S. President</p>
+                        <p class="text " style="font-size: 14px;">
                             “For this reason, around 90% of governments around the world,representing 90% of global GDP,
                             are actively pursuing".
                         </p>
@@ -135,7 +135,7 @@
                     <img src="goverments/World-map-image-with-gold.png" alt="world map" class="img-fluid mt-5" />
                     <div class="p-2 text-light">
                         <h6 class="lead ">Dr. Hubert Minnis</h6>
-                        <p class="text p-2">Prime Minister of Bahamas</p>
+                        <p class="text ">Prime Minister of Bahamas</p>
                         <p class="text font-italic quotes" style="font-size: 14px;">
                             “Companies that utilize blockchain technology as a basis for their new products and
                             services, represent a genesis.”
@@ -270,6 +270,17 @@
 
     <!-- Modal for Government Statement -->
     <div id="govModal" class="bio-modal">
+
+        <!-- LEFT ARROW -->
+        <button id="govPrevBtn" class="gov-nav-btn nav-left">
+            <img src="https://crypto-test.codecyon.com/wp-content/uploads/2023/03/Prev.png" alt="Previous" />
+        </button>
+
+        <!-- RIGHT ARROW -->
+        <button id="govNextBtn" class="gov-nav-btn nav-right">
+            <img src="https://crypto-test.codecyon.com/wp-content/uploads/2023/03/next.png" alt="Next" />
+        </button>
+
         <div class="bio-modal-content">
             <span class="bio-close" onclick="closeGovModal()">&times;</span>
             <div class="bio-modal-body">
@@ -284,14 +295,14 @@
                     <hr class="bio-hr" />
                     <p id="govModalQuote" class="bio-description"></p>
                     <audio id="govModalAudio" controls style="margin-top: 1rem; width: 100%;">
-                        <source src="" type="audio/mpeg">
+                        <source src="" type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
-
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Modal for Government Quotes -->
     <div id="govModal" class="bio-modal">
@@ -665,29 +676,60 @@
             <div class="rings-grid mt-5">
                 <div class="ring-item">
                     <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
-                    <div class="ring-text">$1,000 Billion<br><span>Crypto Market Cap</span></div>
+                    <div class="ring-text">
+                        <div class="ring-line">$1,000</div>
+                        <div class="ring-line">Billion</div>
+                        <div class="ring-line">Crypto Market Cap</div>
+                    </div>
                 </div>
+
                 <div class="ring-item">
                     <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
-                    <div class="ring-text">300 Million<br><span>Plus Crypto Users</span></div>
+                    <div class="ring-text">
+                        <div class="ring-line">300</div>
+                        <div class="ring-line">Million</div>
+                        <div class="ring-line">Plus Crypto Users</div>
+                    </div>
                 </div>
+
                 <div class="ring-item">
                     <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
-                    <div class="ring-text">100,000<br><span>New Millionaires</span></div>
+                    <div class="ring-text">
+                        <div class="ring-line">100,000</div>
+                        <div class="ring-line">New</div>
+                        <div class="ring-line">Millionaires</div>
+                    </div>
                 </div>
+
                 <div class="ring-item">
                     <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
-                    <div class="ring-text">$112 Billion<br><span>Daily Crypto Trade</span></div>
+                    <div class="ring-text">
+                        <div class="ring-line">$112</div>
+                        <div class="ring-line">Billion</div>
+                        <div class="ring-line">Daily Crypto Trade</div>
+                    </div>
                 </div>
+
                 <div class="ring-item">
                     <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
-                    <div class="ring-text">9 Million%<br><span>Bitcoin’s Growth</span></div>
+                    <div class="ring-text">
+                        <div class="ring-line">9</div>
+                        <div class="ring-line">Million%</div>
+                        <div class="ring-line">Bitcoin’s Growth</div>
+                    </div>
                 </div>
+
                 <div class="ring-item">
                     <img src="https://bitcoinat500000.com/img/photo-circle-bg.png" class="ring-img" />
-                    <div class="ring-text">$2 Trillion<br><span>Crypto Market Cap</span></div>
+                    <div class="ring-text">
+                        <div class="ring-line">$2</div>
+                        <div class="ring-line">Trillion</div>
+                        <div class="ring-line">Crypto Market Cap</div>
+                    </div>
                 </div>
             </div>
+
+
 
         </div>
     </section>
@@ -856,48 +898,57 @@
         </div>
     </section>
 
-    <section class="media-logos-section ">
+    <section class="media-logos-section">
         <div class="media-logos-container">
             <div class="media-logo">
-                <img src="https://bitcoinat500000.com/img/news%20logo/CBS-logo.png" alt="CBS" />
+                <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">
+                    <img src="https://bitcoinat500000.com/img/news%20logo/CBS-logo.png" alt="CBS" />
+                </a>
             </div>
             <div class="media-logo">
-                <img src="https://bitcoinat500000.com/img/news%20logo/Usa-today-logo.png" alt="USA Today" />
+                <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">
+                    <img src="https://bitcoinat500000.com/img/news%20logo/Usa-today-logo.png" alt="USA Today" />
+                </a>
             </div>
             <div class="media-logo">
-                <img src="https://bitcoinat500000.com/img/news%20logo/NBC_logo.png" alt="NBC" />
+                <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">
+                    <img src="https://bitcoinat500000.com/img/news%20logo/NBC_logo.png" alt="NBC" />
+                </a>
             </div>
             <div class="media-logo">
-                <img src="https://bitcoinat500000.com/img/news%20logo/Fox-news-logo.png" alt="Fox News" />
+                <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">
+                    <img src="https://bitcoinat500000.com/img/news%20logo/Fox-news-logo.png" alt="Fox News" />
+                </a>
             </div>
         </div>
     </section>
 
+
     <section>
-        <div class="bg-black text-light d-flex align-items-center justify-content-center" style="height: 340px;">
+        <div class="bg-black text-light d-flex align-items-center justify-content-center image-section">
             <div class="container-fluid">
                 <div class="row h-100">
                     <!-- Image 1 -->
-                    <div class="col-6 d-flex align-items-center justify-content-center h-100">
-                        <img src="https://bitcoinat500000.com/img/Bitcoin-Skin.png" alt="Logo"
-                            style="width: 97%; object-fit: cover;">
+                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100 mb-4 mb-md-0">
+                        <img src="https://bitcoinat500000.com/img/Bitcoin-Skin.png" alt="Logo" class="img-fill">
                     </div>
 
                     <!-- Image 2 -->
-                    <div class="col-6 d-flex align-items-center justify-content-center h-100">
-                        <img src="https://bitcoinat500000.com/img/_500000-Bitcoin-skin.png" alt="Logo"
-                            style="width: 97%; object-fit: cover;">
+                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100">
+                        <img src="https://bitcoinat500000.com/img/_500000-Bitcoin-skin.png" alt="Logo" class="img-fill">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <footer>
         <!-- Bottom Section: 4 Columns -->
         <div class="bg-secondary text-light py-5">
             <div class="container">
-                <div class="row text-center row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                <div class="row text-center row-cols-2 row-cols-md-4 g-4">
+
                     <!-- Column 1 -->
                     <div class="col">
                         <h5 class="">PRODUCTS</h5>
@@ -946,7 +997,7 @@
         </div>
 
         <!-- Bottom Bar -->
-        <div class="bg-dark text-light py-3 border-top border-secondary">
+        <div class="bg-dark text-light py-3 ">
             <div
                 class="container d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center gap-2">
                 <span class="small">Copyright 2025</span>
@@ -1081,6 +1132,61 @@
                 ]
             });
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            const govCards = $('.goverment-modal');
+            const modal = $('#govModal');
+            let currentIndex = 0;
+            const modalImg = $('#govModalImg');
+            const modalTitle = $('#govModalTitle');
+            const modalQuote = $('#govModalQuote');
+
+            // Extract data from all cards into an array
+            const govData = [];
+            govCards.each(function () {
+                const card = $(this).closest('.position-relative');
+                const imgSrc = card.find('img').first().attr('src');
+                const quote = card.find('.quotes').text().trim();
+                const title = card.find('h6').text().trim();
+                govData.push({ imgSrc, quote, title });
+            });
+
+            function showModal(index) {
+                currentIndex = index;
+                const data = govData[currentIndex];
+                modalImg.attr('src', data.imgSrc);
+                modalTitle.text(data.title);
+                modalQuote.text(data.quote);
+                modal.fadeIn();
+            }
+
+            govCards.each(function (index) {
+                $(this).on('click', function () {
+                    showModal(index);
+                });
+            });
+
+            $('#govPrevBtn').on('click', function () {
+                currentIndex = (currentIndex - 1 + govData.length) % govData.length;
+                showModal(currentIndex);
+            });
+
+            $('#govNextBtn').on('click', function () {
+                currentIndex = (currentIndex + 1) % govData.length;
+                showModal(currentIndex);
+            });
+
+            window.onclick = function (event) {
+                if (event.target === modal[0]) {
+                    closeGovModal();
+                }
+            };
+        });
+
+        function closeGovModal() {
+            $('#govModal').fadeOut();
+        }
     </script>
 
     <script>

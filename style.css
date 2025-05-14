@@ -218,7 +218,7 @@ body {
 }
 
 /* Responsive Navbar */
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.85);
     padding: 15px;
@@ -695,16 +695,24 @@ body {
 }
 
 .rings-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
   gap: 2rem;
+  justify-items: center;
+}
+
+/* On larger screens, show more columns (optional) */
+@media (min-width: 768px) {
+  .rings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
 }
 
 .ring-item {
-  position: relative;
-  width: 160px;
+  width: 100%;
+  max-width: 160px;
   height: 160px;
+  position: relative;
 }
 
 .ring-img {
@@ -719,12 +727,20 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 0.95rem;
-  line-height: 1.3;
-  /* font-weight: 600; */
-  padding: 0 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 0.8rem;
+  line-height: 1.2;
   pointer-events: none;
+}
+
+.ring-line {
+  display: block;
 }
 
 .ring-text span {
@@ -1060,8 +1076,8 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: transparent;
   z-index: 999;
@@ -1085,6 +1101,30 @@ body {
 .govt-desc {
   top: 30%;
 }
+.gov-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.gov-nav-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Left side */
+.nav-left {
+  left: 10px;
+}
+
+/* Right side */
+.nav-right {
+  right: 10px;
+}
 
 @media (min-width: 768px) {
   .govt-desc {
@@ -1094,4 +1134,28 @@ body {
 
 .influencer-card {
   transition: all 0.5s ease-in-out;
+}
+/* Image fill behavior */
+.img-fill {
+  width: 97%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section container height for desktop */
+.image-section {
+  height: 340px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767.98px) {
+  .image-section {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .img-fill {
+    height: auto;
+    max-height: 300px;
+  }
 }
