@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-
   overflow-x: hidden;
   min-height: 100%;
   height: auto;
@@ -15,8 +14,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  /* font-family: "Roboto", Sans-serif; */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -169,11 +167,6 @@ body {
   color: #bfbcbc;
   font-size: 40px;
 }
-/* 
-.gold-line {
-  width: 40%;
-  margin-top: -15px;
-} */
 
 /* Container should center content */
 .slider {
@@ -422,9 +415,36 @@ body {
 /* Grid layout */
 .influencer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
-  justify-items: center;
+  justify-content: center;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .influencer-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .influencer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .influencer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .influencer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Card styles */
@@ -435,6 +455,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%; /* allows it to fill the grid cell */
+  max-width: 180px; /* prevents it from overflowing */
+  box-sizing: border-box;
 }
 
 /* Profile Image */
@@ -460,39 +483,6 @@ body {
   /* font-weight: 700; */
   margin-bottom: 0.5rem;
   margin-top: -5px;
-}
-
-.influencer-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* 5 cards per row */
-  gap: 2rem;
-  justify-items: center;
-}
-
-/* Responsive: stack fewer cards on smaller screens */
-@media (max-width: 1200px) {
-  .influencer-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .influencer-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .influencer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .influencer-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .bio-modal {
@@ -647,28 +637,95 @@ body {
 }
 
 .main-heading {
-  font-size: 3rem;
-  /* font-weight: 700; */
+  font-size: 5rem;
   margin-bottom: 0.5rem;
+}
+
+/* Scale down on tablets and small screens */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 3rem;
+  }
+}
+
+/* Scale further down on mobile phones */
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.5rem;
+  }
 }
 
 .sub-heading {
   font-size: 1.5rem;
   color: #dcdcdc;
-  margin-bottom: 2rem;
+  margin-bottom: -3rem;
 }
 
 .gold-line {
-  max-width: 400px;
+  width: 63%;
+  height: 48px;
+  object-fit: fill;
   margin: 0 auto 2.5rem;
   margin-top: -5px;
   display: block;
 }
 
+.people-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
 .people-img {
-  max-width: 100%;
+  width: calc(100% / 11 - 0.5rem);
   height: auto;
-  margin-bottom: 2rem;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.people-img.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation delays using nth-child */
+.people-img:nth-child(1).fade-in {
+  transition-delay: 0s;
+}
+.people-img:nth-child(2).fade-in {
+  transition-delay: 0.1s;
+}
+.people-img:nth-child(3).fade-in {
+  transition-delay: 0.2s;
+}
+.people-img:nth-child(4).fade-in {
+  transition-delay: 0.3s;
+}
+.people-img:nth-child(5).fade-in {
+  transition-delay: 0.4s;
+}
+.people-img:nth-child(6).fade-in {
+  transition-delay: 0.5s;
+}
+.people-img:nth-child(7).fade-in {
+  transition-delay: 0.6s;
+}
+.people-img:nth-child(8).fade-in {
+  transition-delay: 0.7s;
+}
+.people-img:nth-child(9).fade-in {
+  transition-delay: 0.8s;
+}
+.people-img:nth-child(10).fade-in {
+  transition-delay: 0.9s;
+}
+.people-img:nth-child(11).fade-in {
+  transition-delay: 1s;
 }
 
 /* Center Join Button */
@@ -681,7 +738,7 @@ body {
 .join-btn {
   background: transparent;
   border: 1px solid gold;
-  color: gold;
+  color: white;
   padding: 10px 24px;
   /* font-weight: 600; */
   border-radius: 4px;
@@ -694,17 +751,18 @@ body {
   color: #000;
 }
 
+/* Default (mobile) - 2 columns */
 .rings-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   justify-items: center;
 }
 
-/* On larger screens, show more columns (optional) */
-@media (min-width: 768px) {
+/* Tablet and up - force 6 columns */
+@media (min-width: 1024px) {
   .rings-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -760,10 +818,15 @@ body {
 }
 
 .animated-text {
-  font-size: 1.5rem;
-  /* font-weight: 500; */
-  color: gold;
-  min-height: 40px;
+  font-size: 3rem;
+  /* color: gold; */
+}
+
+/* Make it smaller on screens narrower than 600px */
+@media (max-width: 600px) {
+  .animated-text {
+    font-size: 0.9rem;
+  }
 }
 
 #blinking-text {
@@ -1022,7 +1085,7 @@ body {
 }
 
 .media-logos-section {
-  background-color: #f4f5f7;
+  background-color: #404d55;
   padding: 5rem 1rem;
 }
 
@@ -1158,4 +1221,12 @@ body {
     height: auto;
     max-height: 300px;
   }
+}
+
+/* Footer */
+.footer-bg {
+  background-color: #222222;
+}
+.copyright {
+  background-color: #383838;
 }
