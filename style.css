@@ -167,6 +167,11 @@ body {
   color: #bfbcbc;
   font-size: 40px;
 }
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 24px;
+  }
+}
 
 /* Container should center content */
 .slider {
@@ -313,6 +318,12 @@ body {
   /* background-color: #f8f9fa; */
 }
 
+@media (max-width: 767.98px) {
+  .video-section {
+    padding: 0.5rem;
+  }
+}
+
 @media (max-width: 576px) {
   .row > div img {
     object-fit: contain !important;
@@ -419,7 +430,7 @@ body {
 }
 
 .influencers-section {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   background-color: #1d252c;
   text-align: center;
   color: white;
@@ -440,7 +451,7 @@ body {
 /* Grid layout */
 .influencer-grid {
   display: grid;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: center;
 }
 
@@ -461,13 +472,15 @@ body {
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .influencer-grid {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* Mobile */
 @media (max-width: 767.98px) {
   .influencer-grid {
+    gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -481,18 +494,38 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%; /* allows it to fill the grid cell */
-  max-width: 180px; /* prevents it from overflowing */
+  max-width: 180px;
   box-sizing: border-box;
 }
 
 /* Profile Image */
-.profile-img {
+/* .profile-img {
   width: 170px;
   height: 170px;
   object-fit: cover;
   border-radius: 50%;
-  /* border: 6px solid #d4af37; */
+  border: 6px solid #d4af37;
   margin-bottom: 1rem;
+} */
+
+.profile-ring {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  background-image: url('https://bitcoinat500000.com/img/photo-circle-bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* World Icon */
@@ -687,6 +720,14 @@ body {
 }
 
 .gold-line {
+  width: 63%;
+  height: 48px;
+  object-fit: fill;
+  /* margin: 0 auto 2.5rem; */
+  margin-top: -5px;
+  display: block;
+}
+.gold-line-eleven-people {
   width: 63%;
   height: 48px;
   object-fit: fill;
