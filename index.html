@@ -131,8 +131,10 @@
     <section class="govt-section py-5">
         <div class="container d-flex flex-column text-center justify-content-center align-items-center">
             <h1 class="section-heading">WHAT ARE GOVERNMENTS SAYING?</h1>
+
             <img src="line.png" alt="line" class="gold-line" />
         </div>
+
         <!-- slider container -->
         <div class="container regular slider ">
             <div class="position-relative goverment-modal">
@@ -298,6 +300,12 @@
                 <div class="position-absolute bottom-0 start-0 w-100 py-5 goverment-modal"></div>
             </div>
         </div>
+        <div class="text-center my-3">
+            <button id="themeToggle" class="theme-toggle-btn">
+                <span id="themeIcon">🌙</span>
+            </button>
+        </div>
+
     </section>
 
     <!-- Modal for Government Statement -->
@@ -356,7 +364,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-1 video-crypto">
+    <div class="container-fluid mt-1 ">
         <section class="video-section">
             <div class="video-container">
                 <video muted loop playsinline controls>
@@ -385,6 +393,7 @@
                 <h2 class="section-title">Here are Some of The Most Influential People Who Played</h2>
                 <h2 class="section-title">Key Roles in Crypto and Bitcoin's Lifecycle</h2>
                 <img src="https://bitcoinat500000.com/img/Line-768x62.png" alt="Gold Line" class="gold-line" />
+
             </div>
 
             <div class="influencer-grid " id="influencerGrid">
@@ -534,6 +543,12 @@
 
             </div>
         </div>
+        <div class="text-center my-4">
+            <button class="theme-toggle-btn" id="influencerThemeToggle">
+                <span id="influencerThemeIcon">🌙</span>
+            </button>
+        </div>
+
     </section>
 
     <!-- MODAL BACKDROP -->
@@ -557,7 +572,7 @@
         </div>
     </div>
 
-    <section class="influencers-section image-slider-section py-5 text-center mt-2">
+    <section class="image-slider-section py-5 text-center mt-2">
         <div class="container">
             <!-- Heading Text -->
             <h1 class=" mb-2">A LITERARY WORK OF ART</h1>
@@ -757,26 +772,22 @@
 
 
             <!-- People Image -->
-            <div class="people-row fade-trigger">
-                <img src="./People/11.png" alt="People" class="people-img" />
-                <img src="./People/10.png" alt="People" class="people-img" />
-                <img src="./People/8.png" alt="People" class="people-img" />
-                <img src="./People/7.png" alt="People" class="people-img" />
-                <img src="./People/6.png" alt="People" class="people-img" />
-                <img src="./People/5.png" alt="People" class="people-img" />
-                <img src="./People/4.png" alt="People" class="people-img" />
-                <img src="./People/3.png" alt="People" class="people-img" />
-                <img src="./People/2.png" alt="People" class="people-img" />
-
-                <img src="./People/1.png" alt="People" class="people-img" />
-                <img src="./People/9.png" alt="People" class="people-img" />
-
-
-
-
-
-
+            <div class="container-fluid px-0">
+                <div class="people-row fade-trigger">
+                    <img src="./People/11.png" alt="People" class="people-img" />
+                    <img src="./People/10.png" alt="People" class="people-img" />
+                    <img src="./People/8.png" alt="People" class="people-img" />
+                    <img src="./People/7.png" alt="People" class="people-img" />
+                    <img src="./People/6.png" alt="People" class="people-img" />
+                    <img src="./People/5.png" alt="People" class="people-img" />
+                    <img src="./People/4.png" alt="People" class="people-img" />
+                    <img src="./People/3.png" alt="People" class="people-img" />
+                    <img src="./People/2.png" alt="People" class="people-img" />
+                    <img src="./People/1.png" alt="People" class="people-img" />
+                    <img src="./People/9.png" alt="People" class="people-img" />
+                </div>
             </div>
+
 
 
             <!-- Join Us Button -->
@@ -1216,6 +1227,32 @@
             ]
         });
     </script>
+    <script>
+        const toggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+
+            // Change icon
+            if (document.body.classList.contains('light-theme')) {
+                themeIcon.textContent = '☀️';
+            } else {
+                themeIcon.textContent = '🌙';
+            }
+        });
+    </script>
+    <script>
+        const influencerToggleBtn = document.getElementById('influencerThemeToggle');
+        const influencerIcon = document.getElementById('influencerThemeIcon');
+        const influencerSection = document.querySelector('.influencers-section');
+
+        influencerToggleBtn.addEventListener('click', () => {
+            influencerSection.classList.toggle('light-theme');
+            influencerIcon.textContent = influencerSection.classList.contains('light-theme') ? '☀️' : '🌙';
+        });
+    </script>
+
 
     <script>
         $(document).ready(function () {
