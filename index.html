@@ -46,7 +46,9 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
+
+                    <!-- Desktop Layout -->
+                    <ul class="navbar-nav me-auto d-none d-xl-flex">
                         <li class="nav-item"><a class="nav-link" href="#">Author</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Excerpt</a></li>
@@ -54,15 +56,44 @@
                         <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Speaking</a></li>
                     </ul>
-                    <ul class="navbar-nav ms-auto">
+
+                    <ul class="navbar-nav ms-auto d-none d-xl-flex">
                         <li class="nav-item"><a class="nav-link" href="#">Exclusives</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Quotes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Merch</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                        <li class="nav-item"><a class="nav-link auth-toggle" href="#" id="authToggle">Login</a></li>
                     </ul>
+
+                    <!-- Mobile Layout (Two Columns) -->
+                    <div class="container d-xl-none">
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Author</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Excerpt</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">NFT</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Speaking</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Exclusives</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Quotes</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Merch</a></li>
+                                    <li class="nav-item"><a class="nav-link auth-toggle" href="#"
+                                            id="authToggleMobile">Login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
 
 
                 <div class="nav-icons d-none d-lg-flex">
@@ -100,7 +131,7 @@
             <!-- Slide 2: Video -->
             <div class="hero-slide">
                 <video class="hero-video hero-img" autoplay muted loop playsinline>
-                    <source src="./videos/bgVideo.mp4" type="video/mp4">
+                    <source src="./videos/Book.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -367,15 +398,21 @@
     <div class="container-fluid mt-1 ">
         <section class="video-section">
             <div class="video-container">
-                <video muted loop playsinline controls>
-                    <source
-                        src="https://crypto-test.codecyon.com/wp-content/uploads/2023/03/Crypto-World-Loud-Compressed.m4v"
-                        type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-wrapper">
+                    <video id="customVideo" muted loop playsinline>
+                        <source
+                            src="https://crypto-test.codecyon.com/wp-content/uploads/2023/03/Crypto-World-Loud-Compressed.m4v"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button id="customPlayBtn" class="custom-play-button" aria-label="Play Video">
+                        ▶
+                    </button>
+                </div>
             </div>
+            <hr style="background-color: #1D2330; height: 3px; border: none;" />
             <section class="cta-section text-center">
-                <div class="container">
+                <div class="container bg">
                     <div class="btn-group-custom mt-4">
                         <a href="#" class="btn bio-button">Personal Website</a>
                         <a href="#" class="btn bio-button">Download Keynote</a>
@@ -1074,18 +1111,18 @@
         <!-- Bottom Section: 4 Columns -->
         <div class="footer-bg text-light py-5">
             <div class="container">
-                <div class="row text-center row-cols-2 row-cols-md-4 g-4">
+                <div class="row text-center row-cols-2 row-cols-md-4 g-4 justify-content-center">
 
                     <!-- Column 1 -->
-                    <div class="col">
-                        <h6 class="">PRODUCTS</h6>
+                    <!-- <div class="col"> -->
+                    <!-- <h6 class="">PRODUCTS</h6>
                         <ul class="list-unstyled">
                             <li><a href="#" class="text-light text-decoration-none">Pricing</a></li>
                             <li><a href="#" class="text-light text-decoration-none">Individual</a></li>
                             <li><a href="#" class="text-light text-decoration-none">Institutions</a></li>
                             <li><a href="#" class="text-light text-decoration-none">Corporations</a></li>
-                        </ul>
-                    </div>
+                        </ul> -->
+                    <!-- </div> -->
 
                     <!-- Column 2 -->
                     <div class="col">
@@ -1103,7 +1140,7 @@
                         <h6 class="">LINKS</h6>
                         <ul class="list-unstyled">
                             <li><a href="#" class="text-light text-decoration-none">Merch</a></li>
-                            <li><a href="#" class="text-light text-decoration-none">Pre order</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Buy</a></li>
                             <li><a href="#" class="text-light text-decoration-none">NFT</a></li>
                             <li><a href="#" class="text-light text-decoration-none">Social</a></li>
                         </ul>
@@ -1242,6 +1279,7 @@
             }
         });
     </script>
+
     <script>
         const influencerToggleBtn = document.getElementById('influencerThemeToggle');
         const influencerIcon = document.getElementById('influencerThemeIcon');
@@ -1250,6 +1288,29 @@
         influencerToggleBtn.addEventListener('click', () => {
             influencerSection.classList.toggle('light-theme');
             influencerIcon.textContent = influencerSection.classList.contains('light-theme') ? '☀️' : '🌙';
+        });
+    </script>
+
+
+    <script>
+        const video = document.getElementById('customVideo');
+        const playBtn = document.getElementById('customPlayBtn');
+
+        // Play on click
+        playBtn.addEventListener('click', () => {
+            video.play();
+            video.setAttribute('controls', '');
+            playBtn.style.display = 'none';
+        });
+
+        // Show button when video is paused
+        video.addEventListener('pause', () => {
+            playBtn.style.display = 'block';
+        });
+
+        // Hide button when video plays
+        video.addEventListener('play', () => {
+            playBtn.style.display = 'none';
         });
     </script>
 
@@ -1371,7 +1432,7 @@
         setInterval(() => {
             document.getElementById("blinking-text").textContent = phrases[i];
             i = (i + 1) % phrases.length;
-        }, 2000); 
+        }, 1200); 
     </script>
 
     <script>
@@ -1422,6 +1483,28 @@
             }
         }
     </script>
+    <script>
+        const authLink = document.getElementById('authToggle');
+        const options = ['Login', 'Signup'];
+        let currentIndex = 0;
+
+        setInterval(() => {
+            authLink.classList.add('fade-out');
+
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % options.length;
+                authLink.textContent = options[currentIndex];
+
+                authLink.classList.remove('fade-out');
+                authLink.classList.add('fade-in');
+
+                setTimeout(() => {
+                    authLink.classList.remove('fade-in');
+                }, 500);
+            }, 500); // wait for fade-out to complete
+        }, 3000);
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const images = document.querySelectorAll(".people-img");
