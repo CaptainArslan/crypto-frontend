@@ -63,7 +63,19 @@
                         <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Merch</a></li>
-                        <li class="nav-item"><a class="nav-link auth-toggle" href="#" id="authToggle">Login</a></li>
+                        <li class="nav-item">
+                            <div class="auth-flip-container">
+                                <div class="flip-panel">
+                                    <div class="flip-text-wrapper">
+                                        <span class="front">Login</span>
+                                        <span class="back">Signup</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+
                     </ul>
 
                     <!-- Mobile Layout (Two Columns) -->
@@ -86,14 +98,23 @@
                                     <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#">Merch</a></li>
-                                    <li class="nav-item"><a class="nav-link auth-toggle" href="#"
-                                            id="authToggleMobile">Login</a></li>
+                                    <li class="nav-item">
+                                        <div class="auth-flip-container">
+                                            <div class="flip-panel">
+                                                <div class="flip-text-wrapper">
+                                                    <span class="front">Login</span>
+                                                    <span class="back">Signup</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
 
 
                 <div class="nav-icons d-none d-lg-flex">
@@ -397,28 +418,30 @@
     </div>
     <div class="container-fluid mt-1 ">
         <section class="video-section">
-            <div class="video-container">
-                <div class="video-wrapper">
-                    <video id="customVideo" muted loop playsinline>
-                        <source
-                            src="https://crypto-test.codecyon.com/wp-content/uploads/2023/03/Crypto-World-Loud-Compressed.m4v"
-                            type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <button id="customPlayBtn" class="custom-play-button" aria-label="Play Video">
-                        ▶
-                    </button>
-                </div>
-            </div>
-            <hr style="background-color: #1D2330; height: 3px; border: none;" />
-            <section class="cta-section text-center">
-                <div class="container bg">
-                    <div class="btn-group-custom mt-4">
-                        <a href="#" class="btn bio-button">Personal Website</a>
-                        <a href="#" class="btn bio-button">Download Keynote</a>
+            <div class="container black-bg rounded">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video id="customVideo" muted loop playsinline>
+                            <source
+                                src="https://crypto-test.codecyon.com/wp-content/uploads/2023/03/Crypto-World-Loud-Compressed.m4v"
+                                type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button id="customPlayBtn" class="custom-play-button" aria-label="Play Video">
+                            ▶
+                        </button>
                     </div>
                 </div>
-            </section>
+                <div class="cta-section text-center">
+                    <div class="container black-bg rounded-top">
+                        <div class="btn-group-custom text-center py-3">
+                            <a href="#" class="btn video-button">Personal Website</a>
+                            <a href="#" class="btn video-button">Download Keynote</a>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
         </section>
 
     </div>
@@ -958,7 +981,13 @@
                             alt="Facebook" /></a>
 
                 </div>
-                <button class="yellow-btn">Share the Content</button>
+                <!-- Social Left -->
+                <div class="button-wrapper">
+                    <button class="yellow-btn">Share the Content</button>
+                </div>
+
+
+
             </div>
 
 
@@ -976,7 +1005,10 @@
                         <input type="checkbox" required>
                         <span>I agree to the User Agreement, Privacy Policy, Cookie Policy, and E-Sign Consent.</span>
                     </label>
-                    <button type="submit" class="yellow-btn2">Submit</button>
+                    <!-- Form Right -->
+                    <div class="button-wrapper">
+                        <button type="submit" class="yellow-btn2">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -1183,6 +1215,31 @@
     <script>
         window.addEventListener('scroll', function () {
             console.log('Native scroll event works');
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const flipPanels = document.querySelectorAll('.flip-panel');
+            let currentIndex = 0;
+            const options = ['Login', 'Signup'];
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % options.length;
+                const nextText = options[currentIndex];
+
+                flipPanels.forEach(panel => {
+                    panel.classList.toggle('flipped');
+
+                    const front = panel.querySelector('.front');
+                    const back = panel.querySelector('.back');
+
+                    if (panel.classList.contains('flipped')) {
+                        back.textContent = nextText;
+                    } else {
+                        front.textContent = nextText;
+                    }
+                });
+            }, 3000);
         });
     </script>
 
@@ -1483,28 +1540,6 @@
             }
         }
     </script>
-    <script>
-        const authLink = document.getElementById('authToggle');
-        const options = ['Login', 'Signup'];
-        let currentIndex = 0;
-
-        setInterval(() => {
-            authLink.classList.add('fade-out');
-
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % options.length;
-                authLink.textContent = options[currentIndex];
-
-                authLink.classList.remove('fade-out');
-                authLink.classList.add('fade-in');
-
-                setTimeout(() => {
-                    authLink.classList.remove('fade-in');
-                }, 500);
-            }, 500); // wait for fade-out to complete
-        }, 3000);
-    </script>
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const images = document.querySelectorAll(".people-img");
