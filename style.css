@@ -165,6 +165,7 @@ body {
   max-width: 1200px;
   text-align: center;
   color: #939393;
+
   font-size: 40px;
 }
 @media (max-width: 767.98px) {
@@ -430,9 +431,8 @@ body {
 .video-button {
   background: #262626;
   border-radius: 8px;
-  padding: 5px 10px;
-  color: whitesmoke;
-  font-weight: bold;
+  padding: 12px 20px;
+  color: #939393;
   font-size: 14px;
   text-decoration: none;
 }
@@ -467,10 +467,17 @@ body {
 }
 
 .section-title {
-  font-size: 1.75rem;
-  /* font-weight: 700; */
+  font-size: 3rem;
   color: #939393;
-  margin-bottom: 0.5rem;
+  text-align: center; /* Centers the text */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.5rem; /* Slightly smaller for smaller screens */
+    text-align: center; /* Ensure it's centered on mobile too */
+  }
 }
 
 .section-subtitle {
@@ -479,7 +486,7 @@ body {
   color: #555;
 }
 .influencers-section {
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
   background-color: #1d252c;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -519,7 +526,7 @@ body {
 /* Large desktop */
 @media (min-width: 1200px) {
   .influencer-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -771,8 +778,27 @@ body {
 }
 
 .gold-line {
-  width: 63%;
+  width: 43%;
+  min-width: 70%;
   height: 48px;
+  object-fit: fill;
+  /* margin: 0 auto 2.5rem; */
+  margin-top: -5px;
+  display: block;
+}
+.gold-line-referral {
+  width: 33%;
+  min-width: 70%;
+  height: 48px;
+  object-fit: fill;
+  /* margin: 0 auto 2.5rem; */
+  margin-top: -5px;
+  display: block;
+}
+.gold-line-influencer {
+  width: 39%;
+  min-width: 70%;
+  height: 42px;
   object-fit: fill;
   /* margin: 0 auto 2.5rem; */
   margin-top: -5px;
@@ -971,6 +997,7 @@ body {
 
 #blinking-text {
   /* Remove the blink animation */
+  font-size: larger;
   transition: opacity 0.6s ease-in-out;
 }
 
@@ -1115,18 +1142,48 @@ body {
   padding: 0.75rem;
   margin-bottom: 1rem;
   border: 1px solid #444;
-  background-color: #2a2c2f;
+  background-color: #1d252c;
   color: #fff;
+  text-align: center; /* Center the placeholder text and typed input */
+
   border-radius: 4px;
 }
-
+/* Optional: adjust for mobile responsiveness */
+@media (max-width: 600px) {
+  .custom-form input[type='text'],
+  .custom-form input[type='email'] {
+    font-size: 1rem; /* Adjust font size if needed */
+  }
+}
 .checkbox {
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.75rem;
+
+  border: 1px solid #444;
+  background-color: #1d252c;
+  border-radius: 6px;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+
+  font-size: 0.85rem;
   color: #ccc;
+}
+
+.checkbox input[type='checkbox'] {
+  transform: scale(1.5);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.checkbox-text {
+  max-width: 300px; /* ⬅️ THIS is what squeezes it */
+  text-align: center;
+  line-height: 1.5;
+  color: #5a5b5c;
 }
 
 .checkbox input[type='checkbox'] {
