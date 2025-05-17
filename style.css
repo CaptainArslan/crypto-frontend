@@ -34,14 +34,6 @@ body {
   border-radius: 4px;
   border: 2px solid transparent;
 }
-/* Completely prevent scroll inside the modal */
-#govModal,
-#govModal .bio-modal-content,
-#govModal .bio-modal-body,
-#govModal .bio-text-section {
-  overflow: hidden !important;
-  max-height: none !important;
-}
 
 /* Optional: Ensure the modal doesn't stretch beyond the screen */
 #govModal {
@@ -718,13 +710,6 @@ body.modal-open {
   cursor: pointer;
 }
 
-.bio-modal-body {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
 .bio-image-section {
   flex: 0 0 160px;
   text-align: center;
@@ -797,6 +782,25 @@ body.modal-open {
   flex-direction: row;
   gap: 1.5rem;
   flex-wrap: wrap;
+}
+
+/* On screens smaller than 768px (tablet & mobile) */
+@media (max-width: 768px) {
+  .bio-modal-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio-text-section,
+  .bio-image-section {
+    width: 100%;
+  }
+
+  .bio-profile-img {
+    max-width: 80%;
+    height: auto;
+  }
 }
 
 .bio-profile-img {
@@ -1485,7 +1489,7 @@ body.modal-open {
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   .media-logos-container {
     flex-wrap: nowrap; /* ✅ force single row */
-
+    gap: 4rem;
     justify-content: center;
   }
 
