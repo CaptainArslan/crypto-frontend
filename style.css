@@ -486,7 +486,7 @@ body {
   color: #555;
 }
 .influencers-section {
-  /* padding: 2rem 1rem; */
+  padding: 2rem 1rem;
   background-color: #1d252c;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -526,7 +526,7 @@ body {
 /* Large desktop */
 @media (min-width: 1200px) {
   .influencer-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -562,7 +562,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%; /* allows it to fill the grid cell */
-  max-width: 180px;
+  /* max-width: 180px; */
   box-sizing: border-box;
 }
 
@@ -1095,7 +1095,7 @@ body {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  max-width: 300px; /* Optional: limit width on large screens */
+  max-width: 500px; /* Optional: limit width on large screens */
   font-size: 1rem;
   width: 100%; /* Make button span full width */
 }
@@ -1177,6 +1177,12 @@ body {
   margin-top: 0.2rem;
   flex-shrink: 0;
   cursor: pointer;
+}
+#govModalImg {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* cover the frame area */
+  border-radius: 50%; /* keep it circular */
 }
 
 .checkbox-text {
