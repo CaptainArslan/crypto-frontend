@@ -34,10 +34,32 @@ body {
   border-radius: 4px;
   border: 2px solid transparent;
 }
+/* Completely prevent scroll inside the modal */
+#govModal,
+#govModal .bio-modal-content,
+#govModal .bio-modal-body,
+#govModal .bio-text-section {
+  overflow: hidden !important;
+  max-height: none !important;
+}
+
+/* Optional: Ensure the modal doesn't stretch beyond the screen */
+#govModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Optional: Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
 
 /* Firefox */
 * {
-  scrollbar-width: thin;
+  scrollbar-width: thick;
   scrollbar-color: #ddb445 #ffffff;
 }
 
@@ -389,7 +411,9 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* ✅ Prevent wrapping */
+  overflow-x: auto; /* ✅ Allow horizontal scroll if needed */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .gold-button {
@@ -420,21 +444,45 @@ body {
   color: #ffd700; /* Optional: gold text on hover */
 }
 
-.bio-button {
+/* .bio-button {
   background: #e3b641;
   border-radius: 8px;
   padding: 5px 10px;
   color: whitesmoke;
   font-weight: bold;
   font-size: 14px;
+} */
+.bio-button {
+  background-image: url('influencers/viewBio.png'); /* 🔁 Replace with actual image path */
+  background-size: contain; /* ✅ Keeps image size accurate */
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100px; /* ✅ Match your image width */
+  height: 50px; /* ✅ Match your image height */
+
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  font-family: inherit;
+  text-align: center;
+  line-height: 50px; /* ✅ Vertically center text */
+  cursor: pointer;
+  background-color: transparent; /* ✅ No white box */
 }
+
 .video-button {
   background: #262626;
   border-radius: 8px;
-  padding: 12px 20px;
+  padding: 7px 20px;
   color: #939393;
   font-size: 14px;
   text-decoration: none;
+
+  transition: background 0.3s ease;
 }
 
 /* Prevent hover effects */
@@ -444,6 +492,17 @@ body {
   text-decoration: none;
   box-shadow: none;
   /* border: none; */
+}
+
+@media (max-width: 480px) {
+  .video-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    /* margin: 0.5rem 0; */
+    font-size: 11px;
+    text-align: center;
+  }
 }
 
 .black-bg {
@@ -464,6 +523,31 @@ body {
   font-size: 1.1rem;
   /* font-weight: bold; */
   border-radius: 4px;
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .referral-section .row {
+    display: flex;
+    flex-wrap: nowrap; /* 👈 Force a single row */
+    overflow-x: auto;
+    gap: 1rem; /* Optional spacing */
+    padding: 1rem 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .referral-section .col-6 {
+    flex: 0 0 25%; /* 👈 4 cards per view (25% each) */
+    max-width: 25%;
+    scroll-snap-align: start;
+  }
+
+  .referral-section .row::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+
+  .referral-section .row {
+    scrollbar-width: none; /* Firefox scrollbar hidden */
+  }
 }
 
 .section-title {
@@ -753,7 +837,7 @@ body {
 }
 
 .main-heading {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 0.5rem;
 }
 
@@ -817,7 +901,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap; /* Keep all items in one line */
-  gap: 1.8rem;
+  gap: 1.3rem;
   padding: 1rem;
 }
 
@@ -920,7 +1004,7 @@ body {
 /* Default (mobile) - 2 columns */
 .rings-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   justify-items: center;
 }
@@ -929,6 +1013,12 @@ body {
 @media (min-width: 1024px) {
   .rings-grid {
     grid-template-columns: repeat(6, 1fr);
+  }
+}
+/* Landscape at max 1024px - show 3 columns */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .rings-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1286,6 +1376,30 @@ body {
   align-items: center;
   margin-top: 1rem;
 }
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .press-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .press-card {
+    flex: 0 0 48%; /* ✅ Show 2 cards side by side */
+    scroll-snap-align: start;
+  }
+
+  .press-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .press-grid {
+    scrollbar-width: none;
+  }
+}
 
 .author {
   display: flex;
@@ -1368,6 +1482,19 @@ body {
     gap: 2rem;
   }
 }
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .media-logos-container {
+    flex-wrap: nowrap; /* ✅ force single row */
+
+    justify-content: center;
+  }
+
+  .media-logo {
+    width: 120px; /* ✅ scale down logos to fit */
+    height: 120px;
+    flex: 0 0 auto; /* prevents flex shrinking */
+  }
+}
 
 .slick-prev-custom,
 .slick-next-custom {
@@ -1375,7 +1502,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
-  height: 40px;
+  height: 35px;
   border: none;
   background-color: transparent;
   z-index: 999;
@@ -1418,8 +1545,8 @@ body {
 }
 
 .gov-nav-btn img {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 35px;
 }
 
 /* Left side */
