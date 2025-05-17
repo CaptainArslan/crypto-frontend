@@ -444,14 +444,14 @@ body.modal-open {
   color: #ffd700; /* Optional: gold text on hover */
 }
 
-/* .bio-button {
+.bio-button-book {
   background: #e3b641;
   border-radius: 8px;
   padding: 5px 10px;
   color: whitesmoke;
   font-weight: bold;
   font-size: 14px;
-} */
+}
 .bio-button {
   background-image: url('influencers/viewBio.png'); /* 🔁 Replace with actual image path */
   background-size: contain; /* ✅ Keeps image size accurate */
@@ -500,7 +500,7 @@ body.modal-open {
     width: 100%;
     box-sizing: border-box;
     /* margin: 0.5rem 0; */
-    font-size: 11px;
+    font-size: 10px;
     text-align: center;
   }
 }

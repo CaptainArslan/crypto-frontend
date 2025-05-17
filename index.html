@@ -595,7 +595,25 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         </div>
     </div>
 
-
+    <div id="govModal" class="bio-modal">
+        <div class="bio-modal-content">
+            <span class="bio-close" onclick="closeGovModal()">&times;</span>
+            <div class="bio-modal-body">
+                <div class="bio-image-section">
+                    <img id="govImage" src="" alt="Government Image" class="bio-profile-img" />
+                    <div class="bio-divider">
+                        <img src="goverments/World-map-image-with-gold.png" class="bio-world-icon" />
+                    </div>
+                </div>
+                <div class="bio-text-section">
+                    <h3 id="govName" class="mb-0"></h3>
+                    <p id="govSubtitle" class="text-muted mb-2"></p>
+                    <hr class="bio-hr" />
+                    <p id="govQuote" class="bio-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
     <div class="container-fluid mt-1 ">
@@ -881,8 +899,8 @@ sector. Our step is a leap towards the future aimed at developing this sector an
 
             <!-- Buttons -->
             <div class="btn-group-custom">
-                <a href="#" class="btn bio-button">Buy Book URL</a>
-                <a href="#" class="btn bio-button">Buy NFT URL</a>
+                <a href="#" class="btn bio-button-book">Buy Book URL</a>
+                <a href="#" class="btn bio-button-book">Buy NFT URL</a>
             </div>
         </div>
     </section>
@@ -1409,6 +1427,92 @@ sector. Our step is a leap towards the future aimed at developing this sector an
             console.log('Native scroll event works');
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            const modal = $('#govModal');
+            const modalImg = $('#govModalImg');
+            const modalTitle = $('#govModalTitle');
+            const modalQuote = $('#govModalQuote');
+            const modalAudio = $('#govModalAudio');
+            const modalAudioSource = $('#govModalAudio source');
+
+            let govCards = $('.goverment-modal').toArray(); // real DOM elements
+            let currentIndex = 0;
+
+            function extractData(card) {
+                const $card = $(card);
+                const imgSrc = $card.data('modalimg') || $card.querySelector('img')?.src;
+                const quote = $card.find('.quotes').data('fullquote') || $card.find('.quotes').text().trim();
+                const name = $card.find('h6').text().trim();
+                const position = $card.find('p.text').first().text().trim();
+                const audio = $card.data('audio') || '';
+                return {
+                    imgSrc,
+                    quote,
+                    title: `${name} - ${position}`,
+                    audio
+                };
+            }
+
+            function showModal(index) {
+                currentIndex = index;
+                const data = extractData(govCards[currentIndex]);
+
+                modalImg.attr('src', data.imgSrc);
+                modalTitle.text(data.title);
+                modalQuote.text(data.quote);
+
+                modalAudio[0].pause();
+                modalAudioSource.attr('src', '');
+                modalAudio[0].load();
+
+                if (data.audio) {
+                    modalAudioSource.attr('src', data.audio);
+                    modalAudio[0].load();
+                    modalAudio.show();
+                } else {
+                    modalAudio.hide();
+                }
+
+                modal.fadeIn();
+            }
+
+            // Open modal
+            $('.goverment-modal').each(function (index) {
+                $(this).on('click', function () {
+                    showModal(index);
+                });
+            });
+
+            // Nav buttons
+            $('#govPrevBtn').on('click', function () {
+                currentIndex = (currentIndex - 1 + govCards.length) % govCards.length;
+                showModal(currentIndex);
+            });
+
+            $('#govNextBtn').on('click', function () {
+                currentIndex = (currentIndex + 1) % govCards.length;
+                showModal(currentIndex);
+            });
+
+            window.onclick = function (e) {
+                if (e.target === document.getElementById('govModal')) {
+                    closeGovModal();
+                }
+            };
+
+            function closeGovModal() {
+                $('#govModal').fadeOut();
+                $('#govModalAudio')[0].pause();
+            }
+        });
+    </script>
+
+
+
+
+
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const flipPanels = document.querySelectorAll('.flip-panel');
