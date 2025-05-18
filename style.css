@@ -491,8 +491,7 @@ body.modal-open {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    /* margin: 0.5rem 0; */
-    font-size: 10px;
+    font-size: 9px;
     text-align: center;
   }
 }
@@ -1194,6 +1193,7 @@ body.modal-open {
   }
 
   .modal-nav-btn {
+    background-color: white;
     padding: 8px;
   }
 
@@ -1761,6 +1761,7 @@ body.modal-open {
 
 .video-wrapper video {
   width: 100%;
+  border-radius: 1rem;
   height: auto;
   display: block;
 }
