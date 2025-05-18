@@ -626,6 +626,7 @@ body.modal-open {
   .influencer-grid {
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem; /* 🛠 Add horizontal padding */
   }
 }
 
@@ -661,6 +662,28 @@ body.modal-open {
   object-fit: cover;
   border-radius: 50%;
 }
+@media (max-width: 767.98px) {
+  .profile-ring {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .profile-ring {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
 
 /* World Icon */
 .world-icon {
@@ -668,6 +691,22 @@ body.modal-open {
   height: 50px;
   margin-bottom: 1rem;
   margin-top: -10px;
+}
+@media (max-width: 767.98px) {
+  .world-icon {
+    width: 120px;
+    height: 30px;
+    margin-bottom: 0.5rem;
+    margin-top: -8px; /* slightly less negative margin if needed */
+  }
+}
+@media (max-width: 480px) {
+  .world-icon {
+    width: 100px;
+    height: 25px;
+    margin-bottom: 0.5rem;
+    margin-top: -6px;
+  }
 }
 
 /* Name */
@@ -1649,7 +1688,7 @@ body.modal-open {
 }
 
 .hero-video {
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .video-wrapper video {
