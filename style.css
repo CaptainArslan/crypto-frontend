@@ -1048,8 +1048,9 @@ body.modal-open {
 .rings-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   justify-items: center;
+  padding: 0 1rem;
 }
 
 /* Tablet and up - force 6 columns */
@@ -1067,9 +1068,10 @@ body.modal-open {
 
 .ring-item {
   width: 100%;
-  max-width: 160px;
-  height: 160px;
+  max-width: 150px;
+  aspect-ratio: 1 / 1; /* Keep it square */
   position: relative;
+  overflow: hidden;
 }
 
 .ring-img {
@@ -1088,25 +1090,34 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  align-items: center;
   width: 100%;
-  padding: 0 10px;
-  font-size: 0.8rem;
-  line-height: 1.2;
+  height: 100%;
+  padding: 0 6px;
+  font-size: 0.9rem;
+  line-height: 1.1;
   pointer-events: none;
+  overflow: hidden;
+  word-break: break-word;
 }
 
 .ring-line {
   display: block;
 }
 
-.ring-text span {
-  display: block;
-  /* font-weight: 400; */
-  font-size: 0.85rem;
-  margin-top: 5px;
+/* Responsive font tweak for very small screens */
+@media (max-width: 768px) {
+  .ring-text {
+    font-size: 0.8rem;
+    padding: 0 4px;
+  }
 }
-
+@media (max-width: 400px) {
+  .ring-text {
+    font-size: 0.5rem;
+    padding: 0 4px;
+  }
+}
 .business-leaders-section {
   background: #fff;
   color: #000;
@@ -1132,6 +1143,63 @@ body.modal-open {
   /* Remove the blink animation */
   font-size: larger;
   transition: opacity 0.6s ease-in-out;
+}
+.modal-nav-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: #f0b90b;
+  color: #000;
+  border-radius: 4px;
+}
+
+.modal-nav-buttons button:hover {
+  background-color: #d89f05;
+}
+/* Base arrow button styling */
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.modal-nav-left {
+  left: -50px;
+}
+
+.modal-nav-right {
+  right: -50px;
+}
+
+/* Arrow images */
+.modal-nav-btn img {
+  width: 30px;
+  height: auto;
+}
+
+/* Responsive: reposition arrows inside the modal on small screens */
+@media (max-width: 768px) {
+  .modal-nav-left {
+    left: 10px;
+  }
+
+  .modal-nav-right {
+    right: 10px;
+  }
+
+  .modal-nav-btn {
+    padding: 8px;
+  }
+
+  .modal-nav-btn img {
+    width: 24px;
+  }
 }
 
 @keyframes blink {
