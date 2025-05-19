@@ -961,39 +961,17 @@ body.modal-open {
   }
 }
 /* Landscape View: Fit all 11 images in one row */
-/* Default style for larger screens in landscape */
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-height: 500px) {
   .people-row {
     gap: 0.4rem;
     padding: 0.2rem;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-x: auto; /* optional for small landscape phones */
   }
 
   .people-img {
-    height: 18rem;
+    height: 7rem;
     width: auto;
-  }
-}
-
-/* Medium-sized landscape screens */
-@media screen and (orientation: landscape) and (max-width: 1024px) {
-  .people-img {
-    height: 12rem;
-  }
-}
-
-/* Small landscape screens (e.g., phones) */
-@media screen and (orientation: landscape) and (max-width: 600px) {
-  .people-img {
-    height: 10rem;
-  }
-}
-
-/* Extra-short landscape screens (like original case) */
-@media screen and (orientation: landscape) and (max-height: 500px) {
-  .people-img {
-    height: 10rem;
   }
 }
 
