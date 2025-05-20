@@ -27,6 +27,9 @@
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
 
     <!-- Navbar -->
     <header id="sticky-header" class="sticky-header">
@@ -79,41 +82,39 @@
                     </ul>
 
                     <!-- Mobile Layout (Two Columns) -->
-                    <div class="container d-xl-none">
-                        <div class="row">
-                            <div class="col-6">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Author</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Excerpt</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">NFT</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Speaking</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Exclusives</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Quotes</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Merch</a></li>
-                                    <li class="nav-item">
-                                        <div class="auth-flip-container">
-                                            <div class="flip-panel">
-                                                <div class="flip-text-wrapper">
-                                                    <span class="front">Login</span>
-                                                    <span class="back">Signup</span>
-                                                </div>
+                    <div class="d-xl-none d-flex justify-content-center">
+                        <div class="d-flex flex-row" style="gap: 2rem;">
+                            <!-- Left Column -->
+                            <ul class="navbar-nav text-start">
+                                <li class="nav-item"><a class="nav-link" href="#">Author</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Excerpt</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">NFT</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Speaking</a></li>
+                            </ul>
+
+                            <!-- Right Column -->
+                            <ul class="navbar-nav text-start">
+                                <li class="nav-item"><a class="nav-link" href="#">Exclusives</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Quotes</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Merch</a></li>
+                                <li class="nav-item">
+                                    <div class="auth-flip-container">
+                                        <div class="flip-panel">
+                                            <div class="flip-text-wrapper">
+                                                <span class="front">Login</span>
+                                                <span class="back">Signup</span>
                                             </div>
                                         </div>
-                                    </li>
-
-
-                                </ul>
-                            </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
                 </div>
 
 
@@ -157,14 +158,12 @@
                 </video>
             </div>
 
-            <!-- Slide 3: External Bitcoin Image -->
-            <div class="hero-slide">
-                <img src="./bgimage.png" alt="Bitcoin Slide" class="hero-img" loading="lazy" />
-            </div>
+
+
         </div>
     </section>
     <!-- Video Section -->
-    <section class="py-2">
+    <section class="py-2  mt-5">
         <div class="container">
             <div class="video-overlay-wrapper">
                 <video autoplay muted loop playsinline>
@@ -180,7 +179,7 @@
     </section>
 
     <!-- Government Section -->
-    <section class="govt-section py-5">
+    <section class="govt-section py-1  mt-5">
         <div class="container d-flex flex-column text-center justify-content-center align-items-center">
             <h1 class="section-heading">WHAT ARE GOVERNMENTS SAYING?</h1>
 
@@ -198,7 +197,7 @@
                     <div class="p-2 text-light" style="font-size: 12px;">
                         <h6 class="lead ">Narendra Modi</h6>
                         <p class="text ">Prime Minister of India</p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="
                                                         “We must ... jointly shape global norms for emerging technologies like social media and cryptocurrencies so that they
                                                         are used to empower democracy, not to undermine it.Technology has become a major instrument of global competition &amp;
@@ -220,7 +219,7 @@
                     <div class="p-2 text-light" style="font-size: 12px;">
                         <h6 class="lead ">Hilary Clinton</h6>
                         <p class="text ">US Secretary of State</p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="
                                                         “For this reason, around 90% of governments around the world,representing 90% of global GDP, are actively pursuing their own central bank digital currencies (CBDCs).” “First, digital currencies are an inevitability in the ever more digital world that we live in. When tech is driving the way we live, work, do business and much more besides, it makes sense to have money that runs on tech too">
                             “For this reason, around 90% of governments around the world,representing 90% of global GDP,
@@ -241,7 +240,7 @@
                     <div class="p-2 text-light" style="font-size: 12px;">
                         <h6 class="lead ">Jelena McWilliams</h6>
                         <p class="text ">Former FDIC Chairman U.S.</p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="My goal in this interagency group is to basically provide a path for banks to be able to act as a custodian of these assets, use crypto assets, digital assets as some form of collateral. I think that we need to allow banks in this space, while appropriately managing and mitigating risk, McWilliams said. If we don’t bring this activity inside the banks, it is going to develop outside of the banks... The federal regulators won’t be able to regulate it.">
                             “My goal in this interagency group is to basically provide a path for banks to be
                             able to act as a custodian of
@@ -264,7 +263,8 @@
                     <div class="p-2 text-light" style="font-size: 12px;">
                         <h6 class="lead">King Charles III</h6>
                         <p class="text">King of England</p>
-                        <p class="text quotes" data-fullquote="Blockchain! Yes! Yes, very interesting development.">
+                        <p class="text quotes text-quotes"
+                            data-fullquote="Blockchain! Yes! Yes, very interesting development.">
                             “Blockchain! Yes! Yes, very interesting development.”
                         </p>
                     </div>
@@ -283,7 +283,7 @@
                         <p class="text ">
                             Vice President PM of UAE
                         </p>
-                        <p class="text quotes" data-fullquote="
+                        <p class="text quotes text-quotes" data-fullquote="
                                                         
                                                         “The future belongs to whoever designs it,” “Today, through the virtual assets law, we seek to participate in the design of this new and rapidly growing global
 sector. Our step is a leap towards the future aimed at developing this sector and protecting all  investors in it”
@@ -309,7 +309,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <h6 class="lead">Joe Biden
                         </h6>
                         <p class="text ">U.S.President</p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="
                                                         “For this reason, around 90% of governments around the world,representing 90% of global GDP, are actively pursuing their own central bank digital currencies (CBDCs).” “First, digital currencies are an inevitability in the ever more digital world that we live in. When tech is driving the way we live, work, do business and much more besides, it makes sense to have money that runs on tech too">
                             “For this reason, around 90% of governments around the world,representing 90% of global GDP,
@@ -332,7 +332,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <h6 class="lead ">Dr. Hubert Minnis</h6>
                         <p class="text ">Prime Minister of Bahamas</p>
 
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="
                                                                                                             Companies that utilize blockchain technology as a basis for their new products and services, represent a genesis of a
                                                                                                             new wave of solutions that we believe will change the world as we know it. There is no reason why these new blockchain
@@ -358,7 +358,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <p class="text ">
                             U.S. CFTC Commissioner
                         </p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="
                                                                            
                                                                             “The CFTC already has a framework that’s ready-made to go right now into the regulated sector for digital assets.” Caroline D. Pham was sworn in as a CFTC Commissioner on April 14, 2022. She is a recognized leader in financial services compliance and regulatory strategy and policy, with deep expertise in derivatives and capital markets and emerging issues such as digital innovation.">
@@ -384,7 +384,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <p class="text ">
                             Senator State of Ketucky
                         </p>
-                        <p class="text quotes" data-fullquote="
+                        <p class="text quotes text-quotes" data-fullquote="
                                                                            
                                      
                                     “Well, I’ve started to question now whether or not cryptocurrency could actually become the reserve currency of the world as more and more people lose confidence in government.” “But here's what I've started to believe now is that the government currencies are so unreliable, they're also fiat currencies, they're not backed by anything. The dollar has been more stable than most other countries and so it is the reserve currency,”
@@ -411,7 +411,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <p class="text ">
                             Mayor of Miami, U.S.
                         </p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="I am going to ask my friends, my brothers and sisters, the mayors of this country to sign on to a mayoral crypto compact, because we need to lead in the absence of leadership, he said. We need to make sure that a generation of prosperity and innovation is not lost because of a lack of innovative spirit.">
                             “I'm going to ask my friends, my brothers and sisters, the mayors of this country to
                             sign on to a mayoral crypto
@@ -436,7 +436,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <p class="text ">
                             Mayor of Miami, U.S.
                         </p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote='Bitcoin is the “new way of paying for goods and services throughout the entire globe” and that schools “must” teach the technology behind it, as well as “this new way of thinking”.'>
                             "Bitcoin is the “new way of paying for goods and services throughout the entire
                             globe” and that schools “must” teach the
@@ -460,7 +460,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <p class="text ">
                             Prime Minister of Japan
                         </p>
-                        <p class="text quotes" data-fullquote="
+                        <p class="text quotes text-quotes" data-fullquote="
                                     “We are confident that incorporating new digital services such as the metaverse and NFTs will lead to economic growth for Japan. As we enter the Web3 era, I feel strongly that we must resolutely promote this environment from a political standpoint.” “The dawn of the Web3 era may lead economic growth [for Japan].”
                                 ">
                             “We are confident that incorporating new digital services such as the metaverse and
@@ -486,7 +486,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <p class="text ">
                             SEC Chairman U.S.
                         </p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="Protecting consumers is generally a good thing, and regulations that are put in place to protect consumers are never a bad thing, he argues. The question is whether governments then overreach themselves. What we’re trying to do is ensure to the best we can within our authorities to bring projects into the investor protection perimeter.">
                             “Protecting consumers is generally a good thing, and regulations that are put in
                             place to protect consumers are
@@ -511,7 +511,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <p class="text ">Former Deputy Governor
 
                         </p>
-                        <p class="text quotes"
+                        <p class="text quotes text-quotes"
                             data-fullquote="$500 million worth of Bitcoin has been traded in Nigeria within the last five years and Nigeria is one of the top 10 countries in the use of cryptocurrencies in the world today. Rather than just shutting it off completely — especially to the extent that it provides livelihoods for many people in a depressed economy.">
                             “$500 million worth of Bitcoin has been traded in Nigeria within the last five years
                             and Nigeria is one of the top
@@ -534,7 +534,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                         <h6 class="lead">Henry Clinton
                         </h6>
                         <p class="text ">U.S Secretary of State</p>
-                        <p class="text quotes" data-fullquote="
+                        <p class="text quotes text-quotes" data-fullquote="
                                                         
                                                         “What looks like a very interesting and somewhat exotic effort to literally mine new coins in order to trade with them has the potential for undermining currencies, for undermining the role of the dollar as the reserve currency, for destabilizing nations, perhaps starting with small ones but going much larger.”
                                                      ">
@@ -616,7 +616,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
     </div>
 
     </div>
-    <div class="container-fluid mt-1 ">
+    <div class="container-fluid mt-5">
         <section class="video-section">
             <div class="container  ">
                 <div class="video-container">
@@ -645,7 +645,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
     </div>
 
 
-    <section class="influencers-section mt-2">
+    <section class="influencers-section mt-5">
         <div class="text d-flex justify-content-center align-items-center flex-column">
             <div class="mt-5">
                 <h2 class="section-title">Here are Some of The Most Influential People Who Played</h2>
@@ -839,7 +839,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         </div>
     </div>
 
-    <section class="image-slider-section py-5 text-center mt-2">
+    <section class="image-slider-section py-5 text-center mt-5">
         <div class="container">
             <!-- Heading Text -->
             <h1 class=" mb-2">A LITERARY WORK OF ART</h1>
@@ -923,7 +923,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         </div>
     </div>
 
-    <section class="referral-section py-5 bg-light text-center">
+    <section class="referral-section py-5 bg-light text-center mt-5">
         <div class="container">
             <!-- Heading -->
             <div class="text d-flex justify-content-center align-items-center flex-column">
@@ -1026,7 +1026,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         </div>
     </section>
 
-    <section class="global-shift-section">
+    <section class="global-shift-section mt-5">
         <div class="container text-center">
 
             <!-- Headings -->
@@ -1126,7 +1126,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         </div>
     </section>
 
-    <section class="business-leaders-section py-5">
+    <section class="business-leaders-section py-5 mt-5">
         <div class="full-width-container">
 
             <h2 class="text-center mb-4">WHAT ARE BUSINESS LEADERS SAYING?</h2>
@@ -1138,7 +1138,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                 </div>
 
                 <div class="video-slide">
-                    <img src="./testimonials/image (4).png alt=" Business Leader 2" class="leader-image" />
+                    <img src="./testimonials/image (4).png" alt="Business Leader 2" class="leader-image" />
                 </div>
 
                 <div class="video-slide">
@@ -1153,7 +1153,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         </div>
     </section>
 
-    <section class="social-form-section">
+    <section class="social-form-section mt-5">
         <div class="container-flex">
             <!-- Left: Social Media -->
             <div class="social-left">
@@ -1291,7 +1291,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         </div>
     </section>
 
-    <section class="media-logos-section">
+    <section class="media-logos-section mt-5">
         <div class="media-logos-container">
             <div class="media-logo">
                 <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">
@@ -1303,7 +1303,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                     <img src="https://bitcoinat500000.com/img/news%20logo/Usa-today-logo.png" alt="USA Today" />
                 </a>
             </div>
-            <div class="media-logo">
+            <div class="media-logo no-bg">
                 <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">
                     <img src="https://bitcoinat500000.com/img/news%20logo/NBC_logo.png" alt="NBC" />
                 </a>
@@ -1317,7 +1317,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
     </section>
 
 
-    <section>
+    <section class="mt-5">
         <div class="bg-black text-light d-flex align-items-center justify-content-center image-section">
             <div class="container-fluid">
                 <div class="row h-100">
@@ -1343,15 +1343,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                 <div class="row text-center row-cols-2 row-cols-md-4 g-4 justify-content-center">
 
                     <!-- Column 1 -->
-                    <!-- <div class="col"> -->
-                    <!-- <h6 class="">PRODUCTS</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-light text-decoration-none">Pricing</a></li>
-                            <li><a href="#" class="text-light text-decoration-none">Individual</a></li>
-                            <li><a href="#" class="text-light text-decoration-none">Institutions</a></li>
-                            <li><a href="#" class="text-light text-decoration-none">Corporations</a></li>
-                        </ul> -->
-                    <!-- </div> -->
+
 
                     <!-- Column 2 -->
                     <div class="col">
@@ -1383,6 +1375,15 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                             <li><a href="#" class="text-light text-decoration-none">Privacy</a></li>
                             <li><a href="#" class="text-light text-decoration-none">Terms</a></li>
                             <li><a href="#" class="text-light text-decoration-none">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h6 class="">NEW NAME</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">Consulting</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Speaking</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Investors</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Global Trend</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1820,6 +1821,17 @@ sector. Our step is a leap towards the future aimed at developing this sector an
 
         setInterval(nextHeroSlide, 5000); // Slide every 5 seconds
     </script>
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader-wrapper");
+            loader.style.opacity = "0";
+            loader.style.transition = "opacity 0.5s ease-out";
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 500);
+        });
+    </script>
+
     <script>
         function openBioModal(name, title, description, imgSrc) {
             document.getElementById("bioName").innerText = name;
