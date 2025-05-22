@@ -600,11 +600,39 @@ body.modal-open {
   margin-bottom: 2.5rem;
   color: #555;
 }
+/* DEFAULT (Landing mode — no theme class applied) */
 .influencers-section {
-  padding: 1px 1rem;
-  background-color: #1d252c;
+  background-color: black; /* or your custom landing bg */
   color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: grid;
+  justify-content: center;
+}
+.influencer-card {
+  background-color: #ffffff;
+  color: #000;
+  border: 2px solid #ddd;
+}
+
+/* LIGHT MODE */
+.influencers-section.light-theme {
+  background-color: #ffffff;
+  color: #212529;
+}
+.influencers-section.light-theme .influencer-card {
+  background-color: #ffffff;
+  color: #212529;
+  border: 2px solid #f0cf61;
+}
+
+/* DARK MODE */
+.influencers-section.dark-theme {
+  background-color: #1d252c;
+  color: #ffffff;
+}
+.influencers-section.dark-theme .influencer-card {
+  background-color: #1d252c;
+  color: #ffffff;
+  border: 2px solid #f0cf61;
 }
 
 .influencers-section.light-theme {
@@ -612,6 +640,11 @@ body.modal-open {
   color: #212529;
 }
 
+.influencers-section.light-theme .influencer-card {
+  background-color: #ffffff;
+  color: #212529;
+  border: 2px solid #f0cf61;
+}
 .influencers-section.light-theme .influencer-card {
   background-color: #ffffff;
   color: #212529;
@@ -633,8 +666,9 @@ body.modal-open {
 /* Grid layout */
 .influencer-grid {
   display: grid;
-  gap: 4rem;
+  gap: 1rem;
   justify-content: center;
+
   color: #939393;
 }
 
@@ -668,20 +702,54 @@ body.modal-open {
     padding: 0 1rem; /* 🛠 Add horizontal padding */
   }
 }
+/* Base mobile styles */
+@media (max-width: 991.98px) {
+  .influencer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Portrait – show only first 6 cards */
+@media (max-width: 767.98px) and (orientation: portrait) {
+  .influencer-grid .influencer-card:nth-child(n + 7) {
+    display: none;
+  }
+}
+
+/* Landscape – show only first 8 cards */
+@media (max-width: 991.98px) and (orientation: landscape) {
+  .influencer-grid .influencer-card:nth-child(n + 9) {
+    display: none;
+  }
+}
+/* Desktop: show only first 5 cards */
+@media (min-width: 992px) {
+  .influencer-grid .influencer-card:nth-child(n + 11) {
+    display: none;
+  }
+}
 
 /* Card styles */
+/* Default: Mobile-first approach */
 .influencer-card {
-  background: #1d252c;
+  background: white;
   padding: 1rem 0.5rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* allows it to fill the grid cell */
-  /* max-width: 180px; */
+  width: 100%; /* Full width on small screens */
   box-sizing: border-box;
 }
 
+@media (min-width: 1024px) {
+  .influencer-card {
+    width: 230px;
+  }
+}
 .profile-ring {
   position: relative;
   width: 170px;
@@ -696,8 +764,8 @@ body.modal-open {
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 155px;
+  height: 155px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -708,8 +776,8 @@ body.modal-open {
   }
 
   .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 155px;
+    height: 155px;
   }
 }
 @media (max-width: 480px) {
@@ -719,7 +787,7 @@ body.modal-open {
   }
 
   .profile-img {
-    width: 150px;
+    width: 155px;
     height: 150px;
   }
 }
@@ -1799,6 +1867,9 @@ body.modal-open {
     height: 120px;
     flex: 0 0 auto; /* prevents flex shrinking */
   }
+}
+.influencer-card {
+  transition: opacity 0.3s ease;
 }
 
 .slick-prev-custom,

@@ -795,7 +795,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         </div>
         </div>
 
-        <div class="text-center my-4">
+        <div class="text-center my-4 py-2">
             <button class="theme-toggle-btn" id="influencerThemeToggle">
                 <span id="influencerThemeIcon">🌙</span>
             </button>
@@ -1698,9 +1698,25 @@ sector. Our step is a leap towards the future aimed at developing this sector an
         const influencerIcon = document.getElementById('influencerThemeIcon');
         const influencerSection = document.querySelector('.influencers-section');
 
+        let mode = 'default'; // Track current theme mode
+
         influencerToggleBtn.addEventListener('click', () => {
-            influencerSection.classList.toggle('light-theme');
-            influencerIcon.textContent = influencerSection.classList.contains('light-theme') ? '☀️' : '🌙';
+            // Clear previous classes
+            influencerSection.classList.remove('light-theme', 'dark-theme');
+
+            // Cycle through modes
+            if (mode === 'default') {
+                influencerSection.classList.add('dark-theme');
+                influencerIcon.textContent = '☀️'; // Switch to sun icon
+                mode = 'dark';
+            } else if (mode === 'dark') {
+                influencerSection.classList.add('light-theme');
+                influencerIcon.textContent = '🌙'; // Switch to moon icon
+                mode = 'light';
+            } else {
+                influencerIcon.textContent = '🌗'; // Optional: half-moon or any icon
+                mode = 'default'; // Back to default (no class)
+            }
         });
     </script>
 
