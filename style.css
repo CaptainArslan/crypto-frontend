@@ -16,7 +16,61 @@ html {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #000; /* or white, or your brand color */
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.inner-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #d3af48;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  border: 4px solid #d3af48;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.6;
+  z-index: 1;
+  animation: pulse 3s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1); /* exact size as inner circle */
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5); /* grows outward */
+    opacity: 0;
+  }
+}
+
+/* #loader-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000; 
   z-index: 9999;
   top: 0;
   left: 0;
@@ -27,7 +81,7 @@ html {
 
 #loader {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid gold; /* Change to your theme color */
+  border-top: 8px solid gold; 
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -41,7 +95,7 @@ html {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
