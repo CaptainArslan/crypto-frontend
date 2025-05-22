@@ -24,6 +24,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+
+    <!-- Video.js JavaScript -->
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
 </head>
 
 <body>
@@ -616,33 +621,23 @@ sector. Our step is a leap towards the future aimed at developing this sector an
     </div>
 
     </div>
-    <div class="container-fluid mt-5">
-        <section class="video-section">
-            <div class="container  ">
-                <div class="video-container">
-                    <div class="video-wrapper">
-                        <video id="customVideo" muted loop playsinline>
-                            <source src="./videos/BTC at _500_000 Perfect_2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button id="customPlayBtn" class="custom-play-button" aria-label="Play Video">
-                            ▶
-                        </button>
-                    </div>
-                </div>
-                <div class="cta-section text-center">
-                    <div class="container black-bg ">
-                        <div class="btn-group-custom text-center py-3">
-                            <a href="#" class="btn video-button">PERSONAL WEBSITE</a>
-                            <a href="#" class="btn video-button">DOWNLOAD KEYNOTE</a>
-                        </div>
-                    </div>
+    <section class="container-fluid mt-5">
+        <div class="responsive-video-wrapper">
+            <video id="customVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto"
+                playsinline loop data-setup='{}'>
+                <source src="./videos/BTC at _500_000 Perfect_2.mp4" type="video/mp4" />
+            </video>
+        </div>
 
-                </div>
-        </section>
-        </section>
+        <div class="cta-section text-center">
+            <div class="btn-group-custom text-center py-3">
+                <a href="#" class="btn video-button">PERSONAL WEBSITE</a>
+                <a href="#" class="btn video-button">DOWNLOAD KEYNOTE</a>
+            </div>
+        </div>
 
-    </div>
+
+    </section>
 
 
     <section class="influencers-section mt-5">
@@ -985,7 +980,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                             B
                         </div>
                         <h6 class="">BitcoinIRA</h6>
-                        <p class="text-muted small">Crypto IRA</p>
+                        <p class="text-muted small">Crypto & IRA</p>
                         <button class="btn btn-outline-dark btn-sm w-100"
                             onclick="copyToClipboard('BITIRA2024',this)">Copy
                             Code</button>
@@ -1138,22 +1133,25 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                 </div>
 
                 <div class="video-slide">
-                    <img src="./testimonials/image (4).png" alt="Business Leader 2" class="leader-image" />
+                    <img src="./testimonials/image (4).png" alt="Business Leader 2" class="leader-image"
+                        style="height: 400px;" />
                 </div>
 
                 <div class="video-slide">
-                    <img src="./testimonials/image (5).png" alt="Business Leader 3" class="leader-image" />
+                    <img src="./testimonials/image (5).png" alt="Business Leader 3" class="leader-image"
+                        style="height: 400px" />
                 </div>
 
-                <div class="video-slide">
-                    <img src="./testimonials/image (6).png" alt="Business Leader 4" class="leader-image" />
+                <div class=" video-slide">
+                    <img src="./testimonials/image (6).png" alt="Business Leader 4" class="leader-image"
+                        style="height: 400px" />
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="social-form-section mt-5">
+    <section class=" social-form-section mt-5">
         <div class="container-flex">
             <!-- Left: Social Media -->
             <div class="social-left">
@@ -1196,7 +1194,8 @@ sector. Our step is a leap towards the future aimed at developing this sector an
                     <label class="checkbox">
                         <input type="checkbox" required>
                         <div class="checkbox-text">
-                            I agree to the User Agreement, Privacy Policy, Cookie Policy, and E-Sign Consent.
+                            I agree to the User Agreement, Privacy Policy, Cookie Policy, and E-Sign
+                            Consent.
                         </div>
                     </label>
 
@@ -1317,7 +1316,7 @@ sector. Our step is a leap towards the future aimed at developing this sector an
     </section>
 
 
-    <section class="mt-5">
+    <section>
         <div class="bg-black text-light d-flex align-items-center justify-content-center image-section">
             <div class="container-fluid">
                 <div class="row h-100">
@@ -1706,25 +1705,23 @@ sector. Our step is a leap towards the future aimed at developing this sector an
     </script>
 
 
+
+
     <script>
-        const video = document.getElementById('customVideo');
-        const playBtn = document.getElementById('customPlayBtn');
+        const player = videojs('customVideo');
 
-        // Play on click
-        playBtn.addEventListener('click', () => {
-            video.play();
-            video.setAttribute('controls', '');
-            playBtn.style.display = 'none';
-        });
+        player.ready(() => {
+            player.pause(); // Show big play button initially
 
-        // Show button when video is paused
-        video.addEventListener('pause', () => {
-            playBtn.style.display = 'block';
-        });
+            // Show big play button when video is paused
+            player.on('pause', () => {
+                player.bigPlayButton.show();
+            });
 
-        // Hide button when video plays
-        video.addEventListener('play', () => {
-            playBtn.style.display = 'none';
+            // Hide big play button when video plays
+            player.on('play', () => {
+                player.bigPlayButton.hide();
+            });
         });
     </script>
 
@@ -1819,18 +1816,35 @@ sector. Our step is a leap towards the future aimed at developing this sector an
             heroSlides[heroIndex].classList.add('hero-slide--active');
         }
 
-        setInterval(nextHeroSlide, 5000); // Slide every 5 seconds
+        setInterval(nextHeroSlide, 8000); // Slide every 5 seconds
     </script>
     <script>
+        const loader = document.getElementById("loader-wrapper");
+
+        // Fallback: Hide loader after 8 seconds no matter what
+        const forceHideLoader = setTimeout(() => {
+            if (loader) {
+                loader.style.opacity = "0";
+                loader.style.transition = "opacity 0.5s ease-out";
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 500);
+            }
+        }, 3000);
+
+        // Preferred: Hide loader when page fully loads
         window.addEventListener("load", () => {
-            const loader = document.getElementById("loader-wrapper");
-            loader.style.opacity = "0";
-            loader.style.transition = "opacity 0.5s ease-out";
-            setTimeout(() => {
-                loader.style.display = "none";
-            }, 500);
+            clearTimeout(forceHideLoader); // Cancel fallback if load completes
+            if (loader) {
+                loader.style.opacity = "0";
+                loader.style.transition = "opacity 0.5s ease-out";
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 500);
+            }
         });
     </script>
+
 
     <script>
         function openBioModal(name, title, description, imgSrc) {

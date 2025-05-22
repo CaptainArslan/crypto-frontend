@@ -426,7 +426,17 @@ body.modal-open {
 
 .cta-section h2 {
   font-size: 2rem;
-  /* font-weight: 600; */
+}
+
+.cta-section {
+  background-color: #000;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  /* padding: 1rem; */
+  box-sizing: border-box;
 }
 
 .btn-group-custom {
@@ -541,7 +551,7 @@ body.modal-open {
 }
 
 .referral-logo {
-  font-size: 1.1rem;
+  font-size: 1rem;
   /* font-weight: bold; */
   border-radius: 4px;
 }
@@ -1025,12 +1035,31 @@ body.modal-open {
     width: 15%; /* Slightly less to account for gaps */
   }
 }
+@media (min-width: 813px) and (max-width: 1024px) and (orientation: landscape) {
+  .people-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    overflow: hidden;
+  }
+
+  .people-img {
+    display: none;
+  }
+
+  .people-img:nth-child(-n + 6) {
+    display: inline-block;
+    height: 200px;
+    width: 15%;
+  }
+}
 
 /* Landscape View: Fit all 11 images in one row */
 @media screen and (orientation: landscape) and (max-height: 500px) {
   .people-row {
     gap: 0.4rem;
-    padding: 0.2rem;
+    padding: 0.6rem;
     flex-wrap: nowrap;
     overflow-x: auto; /* optional for small landscape phones */
   }
@@ -1391,8 +1420,79 @@ body.modal-open {
   width: 100%; /* Make button span full width */
 }
 
+/* Responsive wrapper with left/right spacing */
+.responsive-video-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0rem auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #000;
+  /* border-radius: 1rem; */
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+/* Video.js player fills wrapper */
+.responsive-video-wrapper .video-js {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Stretch actual <video> inside */
+.video-js .vjs-tech {
+  width: 100% !important;
+  height: 100% !important;
+  /* object-fit: cover; */
+}
+
+/* Played portion of progress bar */
+.vjs-play-progress {
+  background-color: #e2b641 !important;
+}
+
+/* Loaded/buffered portion */
+.vjs-load-progress {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Seekbar track background */
+.vjs-slider {
+  background-color: #333 !important;
+}
+/* Customize the big play button */
+.video-js .vjs-big-play-button {
+  background-color: #e2b641 !important; /* Yellow background */
+  border: none !important;
+  border-radius: 50% !important; /* Optional: make it round */
+  width: 70px !important;
+  height: 70px !important;
+  font-size: 2rem !important;
+  line-height: 70px !important;
+  color: #000 !important; /* Black icon color */
+  transition: background-color 0.3s ease;
+}
+
+/* Optional: hover effect */
+.video-js .vjs-big-play-button:hover {
+  background-color: #ffcc00 !important;
+}
+
+/* Mobile: rectangle layout */
+/* @media (max-width: 768px) {
+  .responsive-video-wrapper {
+    width: 95%;
+    margin: 1rem auto;
+    height: 200px;
+    aspect-ratio: auto;
+  }
+} */
+
 .yellow-btn2 {
-  background-color: #f1c40f;
+  background-color: #e2b641;
   color: black;
   border: none;
   padding: 0.7rem 1.8rem;
@@ -1651,7 +1751,7 @@ body.modal-open {
 .media-logo {
   width: 180px;
   height: 180px;
-  background: white;
+  /* background: white; */
   border-radius: 50%;
   padding: 2px;
   box-shadow: 0 0 0 4px #fff, 0 0 10px rgba(0, 0, 0, 0.07);
