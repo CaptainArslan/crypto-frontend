@@ -180,9 +180,10 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay-text">
-                    <h2>One Small Step for Crypto. One Giant Leap for Bitcoin.</h2>
-                    <p class="lead">To the Moon and Beyond</p>
+                    <h2>One Small Step for Crypto</h2>
+                    <p class="lead" id="animated-text">One Giant Leap for Bitcoin</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1133,22 +1134,32 @@ sector. Our step is a leap towards the future aimed at developing this sector an
 
             <div class="business-video-slider">
                 <!-- Slide 1 -->
+                <!-- New video slide -->
                 <div class="video-slide">
-                    <img src="./testimonials/image (3).png" alt="Business Leader 1" class="leader-image" />
+                    <video controls class="leader-video">
+                        <source
+                            src="https://storage.googleapis.com/msgsndr/6CLkpoBD6DnhcDPkOOUc/media/681a86b4bbd7a9e07d39eab1.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-
                 <div class="video-slide">
-                    <img src="./testimonials/image (4).png" alt="Business Leader 2" class="leader-image" />
+                    <video controls class="leader-video">
+                        <source src="                https://storage.googleapis.com/msgsndr/6CLkpoBD6DnhcDPkOOUc/media/681a86bdf3a47f66a492aa1c.mp4
+" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-
                 <div class="video-slide">
-                    <img src="./testimonials/image (5).png" alt="Business Leader 3" class="leader-image" />
-                </div>
-
-                <div class=" video-slide">
-                    <img src="./testimonials/image (6).png" alt="Business Leader 4" class="leader-image" />
+                    <video controls class="leader-video">
+                        <source
+                            src="https://storage.googleapis.com/msgsndr/6CLkpoBD6DnhcDPkOOUc/media/681a86be45a54553f8906d35.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
+
 
         </div>
     </section>
@@ -1679,6 +1690,35 @@ sector. Our step is a leap towards the future aimed at developing this sector an
             ]
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textElement = document.getElementById("animated-text");
+            const phrases = ["One Giant Leap for Bitcoin", "To the Moon and Beyond"];
+            let index = 0;
+
+            setInterval(() => {
+                // Start fade-out
+                textElement.classList.add("fade-out");
+
+                setTimeout(() => {
+                    // Change the phrase
+                    index = (index + 1) % phrases.length;
+                    textElement.textContent = phrases[index];
+
+                    // Fade back in
+                    textElement.classList.remove("fade-out");
+                    textElement.classList.add("fade-in");
+
+                    // Remove fade-in class after animation completes
+                    setTimeout(() => {
+                        textElement.classList.remove("fade-in");
+                    }, 700); // match the fade-in duration
+                }, 700); // match the fade-out duration
+            }, 3000); // change every 3 seconds instead of 5
+        });
+    </script>
+
+
     <script>
         const toggleBtn = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');

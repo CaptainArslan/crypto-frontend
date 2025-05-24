@@ -1368,6 +1368,25 @@ body.modal-open {
 .ring-line {
   display: block;
 }
+#animated-text {
+  transition: opacity 0.7s ease-in-out;
+  font-size: 2rem;
+  opacity: 1;
+}
+
+#animated-text.fade-out {
+  opacity: 0;
+}
+
+#animated-text.fade-in {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  #animated-text {
+    font-size: 1rem;
+  }
+}
 
 /* Responsive font tweak for very small screens */
 @media (max-width: 768px) {
